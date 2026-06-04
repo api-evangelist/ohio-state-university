@@ -1,0 +1,46 @@
+---
+name: Ohio State University
+description: Ohio State University public developer/API footprint review for APIs.json cataloging.
+url: https://raw.githubusercontent.com/api-evangelist/ohio-state-university/refs/heads/main/review.yml
+created: '2026-06-03'
+modified: '2026-06-03'
+reviews:
+  - date: '2026-06-03'
+    rating: 2
+    summary: >-
+      Ohio State University has no centralized public developer portal. The
+      strongest confirmed public APIs come from University Libraries' Knowledge
+      Bank: a live DSpace 7.6 REST API and a live OAI-PMH 2.0 endpoint, both
+      verified returning real metadata. An institution-wide Shibboleth SAML 2.0
+      Web Single Sign-On service is documented but gated to registered campus
+      services. The enterprise Data Catalog is powered by data.world and gated
+      to Ohio State affiliates with no public open-data API. No fabricated
+      endpoints; only URLs that resolved are listed below.
+    endpoints:
+      - url: https://kb.osu.edu/server/api
+        status: 200
+        note: DSpace 7.6 REST API root, returns JSON HAL with repository links.
+      - url: https://kb.osu.edu/server/oai/request?verb=Identify
+        status: 200
+        note: OAI-PMH 2.0 Identify verb, repository "The Knowledge Bank".
+      - url: https://library.osu.edu/kb
+        status: 200
+        note: Knowledge Bank human-facing landing/documentation page.
+      - url: https://cybersecurity.osu.edu/services/web-single-sign
+        status: 200
+        note: Web SSO service docs; SAML 2.0 via Shibboleth, InCommon member.
+      - url: https://github.com/osulibraries
+        status: 200
+        note: Official University Libraries GitHub org (DSpace, IMS, dc repos).
+      - url: https://it.osu.edu/data/data-catalog
+        status: 200
+        note: Data Catalog page; backed by data.world, gated to affiliates.
+      - url: https://www.osu.edu/
+        status: 200
+        note: Official institutional website.
+      - url: https://opic.osu.edu/developers
+        status: 404
+        note: Previously cited developer page no longer resolves.
+      - url: https://www.linkedin.com/school/the-ohio-state-university/
+        status: 999
+        note: Official school page; 999 is LinkedIn bot-block, page exists.

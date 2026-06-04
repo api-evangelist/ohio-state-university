@@ -1,0 +1,99 @@
+---
+aid: ohio-state-university
+name: Ohio State University
+description: >-
+  Ohio State University is a large public land-grant research university in
+  Columbus, Ohio, United States, ranked #208 in the QS World University Rankings
+  2025. It does not operate a single centralized public developer portal;
+  instead its public, programmatically accessible footprint is fragmented across
+  units. The most clearly documented public APIs come from University Libraries'
+  Knowledge Bank institutional repository, which exposes a DSpace 7.6 REST API
+  and an OAI-PMH metadata harvesting interface. Institution-wide web
+  authentication is provided through a Shibboleth SAML 2.0 Single Sign-On
+  service, with most enterprise data and the data.world-backed Data Catalog
+  gated to Ohio State affiliates.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/ohio-state-university/refs/heads/main/apis.yml
+tags:
+  - Education
+  - Higher Education
+  - University
+  - Research
+  - Library
+  - Institutional Repository
+  - Open Access
+  - United States
+created: '2026-06-03'
+modified: '2026-06-03'
+specificationVersion: '0.19'
+apis:
+  - aid: ohio-state-university:kb-rest
+    name: Knowledge Bank DSpace REST API
+    description: >-
+      Public REST API for the Knowledge Bank, Ohio State University Libraries'
+      DSpace 7.6 institutional repository. Exposes communities, collections,
+      items, and bitstreams as JSON (HAL) for the digital scholarship and
+      creative works of Ohio State faculty, staff, and students. Verified live
+      returning DSpace 7.6 metadata.
+    humanURL: https://library.osu.edu/kb
+    baseURL: https://kb.osu.edu/server/api
+    tags: [ Library, Institutional Repository, DSpace, Open Access, REST ]
+    properties:
+      - type: Documentation
+        url: https://library.osu.edu/kb
+      - type: GitHub
+        url: https://github.com/osulibraries/DSpaceOSUKB
+  - aid: ohio-state-university:kb-oai
+    name: Knowledge Bank OAI-PMH Interface
+    description: >-
+      OAI-PMH 2.0 metadata harvesting endpoint for the Knowledge Bank
+      institutional repository. Supports the standard OAI verbs (Identify,
+      ListRecords, ListSets, etc.) for harvesting Dublin Core and other metadata
+      formats. Verified live with an earliest datestamp of 2003.
+    humanURL: https://library.osu.edu/kb/faqs
+    baseURL: https://kb.osu.edu/server/oai/request
+    tags: [ Library, Institutional Repository, OAI-PMH, Metadata, Open Access ]
+    properties:
+      - type: Documentation
+        url: https://library.osu.edu/kb/faqs
+      - type: GitHub
+        url: https://github.com/osulibraries/DSpaceOSUKB
+  - aid: ohio-state-university:websso
+    name: Web Single Sign-On (Shibboleth)
+    description: >-
+      Institution-wide web authentication and authorization service operated by
+      the Office of Technology and Digital Innovation, built on Shibboleth and
+      currently supporting the SAML 2.0 standard with InCommon Federation
+      membership. Used by campus and cloud-based applications to authenticate
+      Ohio State name.# accounts. Intended for registered campus service owners
+      rather than open public consumption.
+    humanURL: https://cybersecurity.osu.edu/services/web-single-sign
+    tags: [ Identity, Authentication, SAML, Shibboleth, SSO ]
+    properties:
+      - type: Documentation
+        url: https://cybersecurity.osu.edu/services/web-single-sign
+      - type: Documentation
+        url: https://dst-docs.it.osu.edu/websso/public/faq.html
+common:
+  - type: Website
+    url: https://www.osu.edu/
+  - type: GitHub
+    url: https://github.com/osulibraries
+  - type: LinkedIn
+    url: https://www.linkedin.com/school/the-ohio-state-university/
+  - type: Authentication
+    url: https://cybersecurity.osu.edu/services/web-single-sign
+  - type: Plans
+    url: plans/ohio-state-university-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/ohio-state-university-rate-limits.yml
+  - type: FinOps
+    url: finops/ohio-state-university-finops.yml
+  - type: Review
+    url: review.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
