@@ -1,0 +1,62 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "osu": "https://www.osu.edu/ns#",
+    "@vocab": "https://www.osu.edu/ns#",
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "logo": "schema:logo",
+    "sameAs": "schema:sameAs",
+    "address": "schema:address",
+    "Organization": "schema:CollegeOrUniversity",
+
+    "api": {
+      "@id": "osu:api",
+      "@container": "@set"
+    },
+    "API": "osu:API",
+    "humanURL": {
+      "@id": "schema:url",
+      "@type": "@id"
+    },
+    "baseURL": {
+      "@id": "osu:baseURL",
+      "@type": "@id"
+    },
+    "tags": "schema:keywords",
+
+    "repository": "osu:repository",
+    "Community": "osu:Community",
+    "Collection": {
+      "@id": "schema:Collection"
+    },
+    "Item": {
+      "@id": "schema:CreativeWork"
+    },
+    "Bitstream": {
+      "@id": "schema:MediaObject"
+    },
+    "handle": "osu:handle",
+    "uuid": {
+      "@id": "schema:identifier"
+    },
+    "title": "schema:name",
+    "metadata": "osu:metadata",
+    "dateAccessioned": {
+      "@id": "schema:dateCreated",
+      "@type": "schema:DateTime"
+    },
+    "author": "schema:author",
+    "subject": "schema:about"
+  },
+  "@type": "Organization",
+  "name": "Ohio State University",
+  "url": "https://www.osu.edu/",
+  "description": "A large public land-grant research university in Columbus, Ohio, United States. Its public, programmatically accessible footprint includes University Libraries' Knowledge Bank DSpace 7.6 institutional repository (REST and OAI-PMH) and an institution-wide Shibboleth SAML 2.0 Single Sign-On service.",
+  "sameAs": [
+    "https://github.com/osulibraries",
+    "https://www.linkedin.com/school/the-ohio-state-university/"
+  ]
+}

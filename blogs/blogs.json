@@ -1,0 +1,14 @@
+{
+  "repo": "ohio-state-university",
+  "feeds": [
+    {
+      "source": "https://news.osu.edu/",
+      "feed_url": "https://news.osu.edu/feed/",
+      "title": "Ohio State News",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-06-03T00:00:00Z"
+}
