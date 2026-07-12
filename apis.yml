@@ -78,6 +78,8 @@ apis:
       - type: Documentation
         url: https://dst-docs.it.osu.edu/websso/public/faq.html
 common:
+  - type: DomainSecurity
+    url: security/ohio-state-university-domain-security.yml
   - type: Website
     url: https://www.osu.edu/
   - type: GitHub
