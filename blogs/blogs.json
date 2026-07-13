@@ -5,10 +5,10 @@
       "source": "https://news.osu.edu/",
       "feed_url": "https://news.osu.edu/feed/",
       "title": "Ohio State News",
-      "saved": 0,
-      "method": "none"
+      "saved": 19,
+      "method": "feed"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-06-03T00:00:00Z"
+  "post_count": 31,
+  "fetched": "2026-07-11T11:43:46Z"
 }
