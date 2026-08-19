@@ -40,7 +40,7 @@ tags:
   - United States
 created: '2026-06-03'
 modified: '2026-06-03'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
   - aid: ohio-state-university:kb-rest
     name: Knowledge Bank DSpace REST API
