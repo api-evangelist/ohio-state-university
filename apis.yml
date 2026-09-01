@@ -1,17 +1,22 @@
 ---
 aid: ohio-state-university
 name: Ohio State University
+x-type: university
+x-category: Public Research University
 description: >-
-  Ohio State University is a large public land-grant research university in
-  Columbus, Ohio, United States, ranked #208 in the QS World University Rankings
-  2025. It does not operate a single centralized public developer portal;
-  instead its public, programmatically accessible footprint is fragmented across
-  units. The most clearly documented public APIs come from University Libraries'
-  Knowledge Bank institutional repository, which exposes a DSpace 7.6 REST API
-  and an OAI-PMH metadata harvesting interface. Institution-wide web
-  authentication is provided through a Shibboleth SAML 2.0 Single Sign-On
-  service, with most enterprise data and the data.world-backed Data Catalog
-  gated to Ohio State affiliates.
+  The Ohio State University is a large public land-grant research university in Columbus, Ohio,
+  United States. It operates no central developer portal and publishes no OpenAPI, no API key
+  programme and no developer documentation for any of its surfaces. What it does operate, verified
+  live on 2026-09-01, is a small set of genuinely institution-run programmable surfaces: an
+  unauthenticated JSON class-search and campus-events API at content.osu.edu/v2 that identifies
+  itself as "OSU Mobile API v2" and backs the public class search at classes.osu.edu; a CKAN 2.10.10
+  open data portal at data.chrr.ohio-state.edu run by the Center for Human Resource Research, which
+  mints its own DataCite DOIs under prefix 10.82271; and an institution-wide Shibboleth SAML 2.0
+  Identity Provider published in the InCommon Federation under entityID urn:mace:incommon:osu.edu
+  with REFEDS Research and Scholarship and SIRTFI assurance. Everything else that looks like an Ohio
+  State API is a vendor platform running under an Ohio State name: the Knowledge Bank repository is
+  DSpace hosted by Atmire, library discovery is Ex Libris Primo, and the LMS is Instructure Canvas.
+  Those tenancies are recorded here as relationships, not as Ohio State contracts.
 type: Index
 deliveryModel:
   model: saas
@@ -41,26 +46,180 @@ access: 3rd-Party
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ohio-state-university.png
 url: https://raw.githubusercontent.com/api-evangelist/ohio-state-university/refs/heads/main/apis.yml
 tags:
-  - Education
-  - Higher Education
   - University
-  - Research
-  - Library
-  - Institutional Repository
-  - Open Access
+  - Higher Education
+  - Education
   - United States
+  - Public Research University
+  - Course Catalog
+  - Open Data
+  - Research Data
+  - Institutional Repository
+  - Library
+  - Identity Federation
+  - Open Access
 created: '2026-06-03'
-modified: '2026-06-03'
+modified: '2026-09-01'
 specificationVersion: '0.23'
+x-coverage:
+  state: covered
+  reason: covered
+  detail: >-
+    Ohio State turned out to operate more than the June 2026 profile credited it with, and less of
+    what it was credited with is actually its own. Two institution-operated public APIs were found
+    and verified this run and neither was previously catalogued: the OSU Mobile Content API v2 at
+    content.osu.edu/v2 (class search and campus events, entirely unauthenticated, no published
+    documentation — the paths were read out of the classes.osu.edu client bundle and then probed)
+    and the CHRR CKAN 2.10.10 open data portal at data.chrr.ohio-state.edu. Ohio State's own
+    Shibboleth SAML IdP was confirmed in InCommon metadata. Against that, the Knowledge Bank
+    surfaces already in this profile were re-graded from institution to tenant: kb.osu.edu is an
+    Ohio State hostname that CNAMEs to osu-prod.cname.atmire.com, so DSpace and its hosting are
+    Atmire's engineering and only the repository content is Ohio State's. Library discovery
+    (search.library.osu.edu CNAME to primo.exlibrisgroup.com) and the LMS (osu.instructure.com) are
+    tenancies added this run for completeness. No pricing, rate limit, status page, terms of service
+    or support channel exists for any Ohio State API, because Ohio State does not run an API
+    programme — it runs a handful of services that happen to answer in JSON.
+  generated: '2026-09-01'
+  method: probed
+  evidence:
+    - url: https://content.osu.edu/v2
+      status: 200
+    - url: https://content.osu.edu/v2/classes/search?q=english&term=1268
+      status: 200
+    - url: https://content.osu.edu/v2/events
+      status: 200
+    - url: https://data.chrr.ohio-state.edu/api/3/action/status_show
+      status: 200
+    - url: https://mdq.incommon.org/entities/urn%3Amace%3Aincommon%3Aosu.edu
+      status: 200
+    - url: https://kb.osu.edu/server/api
+      status: 200
+    - url: https://kb.osu.edu/server/oai/request?verb=Identify
+      status: 200
+    - url: https://api.datacite.org/providers/gvuz
+      status: 200
+    - url: https://www.osu.edu/llms.txt
+      status: 404
+      note: No llms.txt on the institution's primary host.
+    - url: https://www.osu.edu/.well-known/security.txt
+      status: 404
+      note: No security.txt on the institution's primary host.
+    - url: https://cybersecurity.osu.edu/services/web-single-sign
+      status: 301
+      note: >-
+        Pointer removed this run. The WebSSO service page carried in the June 2026 profile now
+        301s to the generic https://it.osu.edu/security landing page — a soft-404 for the claim,
+        live for a status-code-only check. Replaced with the WebSSO FAQ at
+        https://dst-docs.it.osu.edu/websso/public/faq.html, which is the real surviving surface.
 apis:
+  - aid: ohio-state-university:mobile-content-api
+    name: Ohio State Mobile Content API v2
+    x-operator: institution
+    x-operator-basis: >-
+      content.osu.edu is on Ohio State's own registrable domain and CNAMEs to
+      WH-prdosuedu132-VIP.it.ohio-state.edu (140.254.112.132), Ohio State's own address space. No
+      vendor identity appears in the service root, the response envelopes or the DNS chain.
+    description: >-
+      Public, unauthenticated, read-only JSON API operated by Ohio State's Office of Technology and
+      Digital Innovation. Serves academic term lists, full-text class search against Student
+      Information System data, and the public campus events feed. It is the backend behind the
+      public class search at classes.osu.edu and it names itself "OSU Mobile API v2" at its root.
+      Ohio State publishes no documentation and no specification for it; the OpenAPI carried here
+      was DERIVED from the published client bundle and live probes on 2026-09-01, and verified at
+      1,033 courses for Autumn 2026 and 153 campus events.
+    humanURL: https://classes.osu.edu/
+    baseURL: https://content.osu.edu/v2
+    tags: [ Course Catalog, Class Search, Events, Campus Life, Student Information System, REST ]
+    properties:
+      - type: OpenAPI
+        url: openapi/ohio-state-university-mobile-content-api-openapi.yml
+      - type: Examples
+        url: examples/ohio-state-university-classes-search-example.json
+      - type: Examples
+        url: examples/ohio-state-university-classes-searchable-terms-example.json
+      - type: Examples
+        url: examples/ohio-state-university-campus-events-example.json
+  - aid: ohio-state-university:chrr-ckan
+    name: CHRR Open Data Portal (CKAN)
+    x-operator: institution
+    x-operator-basis: >-
+      data.chrr.ohio-state.edu resolves directly to 140.254.214.133, inside Ohio State's own
+      netblock, with no vendor CNAME. The CKAN deployment carries Ohio-State-specific extensions
+      (chrrpermissions, chrr_idatasetform, osubux) and federates login through Ohio State's own
+      Shibboleth IdP via saml2auth.
+    description: >-
+      CKAN 2.10.10 open data portal operated by Ohio State's Center for Human Resource Research.
+      The full CKAN Action API is public for read (status_show, package_list, package_show,
+      datastore search) and currently publishes five datasets including the Consumer Finance
+      Monthly survey series and historic voter files for all 50 states. The deployment mints its
+      own DataCite DOIs under prefix 10.82271 through the registered repository gvuz.dcavye. The
+      CKAN contract itself is CKAN's, not Ohio State's — what is Ohio State's is the deployment,
+      the data and the DOI minting.
+    humanURL: https://data.chrr.ohio-state.edu/
+    baseURL: https://data.chrr.ohio-state.edu/api/3
+    tags: [ Open Data, CKAN, Research Data, DOI, DataCite ]
+    properties:
+      - type: Examples
+        url: examples/ohio-state-university-chrr-ckan-package-list-example.json
+      - type: Examples
+        url: examples/ohio-state-university-chrr-ckan-status-example.json
+      - type: Documentation
+        url: https://chrr.osu.edu/
+  - aid: ohio-state-university:websso
+    name: Web Single Sign-On (Shibboleth Identity Provider)
+    x-operator: institution
+    x-operator-basis: >-
+      webauth.service.ohio-state.edu CNAMEs to webauth.lbext1.it.osu.edu (140.254.112.150), Ohio
+      State's own infrastructure. The IdP software is Shibboleth (open source); the deployment,
+      the identities and the attribute release are Ohio State's.
+    description: >-
+      Institution-wide web authentication and authorization operated by the Office of Technology
+      and Digital Innovation on Shibboleth, supporting SAML 2.0 with Redirect and POST SSO/SLO
+      bindings and SOAP ECP. Every SSO-protected Ohio State service probed in this run redirects
+      here, including the Canvas LMS tenancy. Intended for registered campus and cloud service
+      owners integrating as SAML service providers; there is no self-service SP registration and
+      no open public consumption path.
+    humanURL: https://dst-docs.it.osu.edu/websso/public/faq.html
+    baseURL: https://webauth.service.ohio-state.edu/idp
+    tags: [ Identity, Authentication, SAML, Shibboleth, SSO, Identity Federation ]
+    properties:
+      - type: Documentation
+        url: https://dst-docs.it.osu.edu/websso/public/faq.html
+      - type: Authentication
+        url: authentication/ohio-state-university-authentication.yml
+  - aid: ohio-state-university:incommon-idp-metadata
+    name: InCommon Federation IdP Metadata
+    x-operator: federation
+    x-operator-basis: >-
+      Federation metadata is shared by definition — mdq.incommon.org serves every InCommon member.
+      The entity it serves at urn:mace:incommon:osu.edu is Ohio State's own Identity Provider, so
+      the membership is a fact about Ohio State even though the host is not theirs.
+    description: >-
+      Ohio State's SAML 2.0 Identity Provider as published in the InCommon Federation metadata
+      aggregate, retrievable per-entity over the InCommon MDQ service. The signed EntityDescriptor
+      carries OrganizationName "The Ohio State University", the REFEDS Research and Scholarship
+      entity category, SIRTFI assurance certification, InCommon's Registered-By-InCommon category,
+      and the SSO/SLO/ECP endpoints on webauth.service.ohio-state.edu. Verified live 2026-09-01,
+      application/samlmetadata+xml, 9537 bytes.
+    humanURL: https://spaces.at.internet2.edu/spaces/MDQ/overview
+    baseURL: https://mdq.incommon.org/entities/urn%3Amace%3Aincommon%3Aosu.edu
+    tags: [ Identity Federation, InCommon, SAML, Shibboleth, Metadata ]
+    properties:
+      - type: Conformance
+        url: conformance/ohio-state-university-conformance.yml
   - aid: ohio-state-university:kb-rest
     name: Knowledge Bank DSpace REST API
+    x-operator: tenant
+    x-operator-basis: >-
+      CNAME — kb.osu.edu resolves to osu-prod.cname.atmire.com, an Atmire-hosted DSpace tenancy.
+      The hostname is Ohio State's and the host rule reads it as institution-operated; the DNS
+      chain says the software and the operations are Atmire's. Recorded as a tenancy, not deleted:
+      the repository, its 20-plus years of content and its Ohio State branding are real.
     description: >-
-      Public REST API for the Knowledge Bank, Ohio State University Libraries'
-      DSpace 7.6 institutional repository. Exposes communities, collections,
-      items, and bitstreams as JSON (HAL) for the digital scholarship and
-      creative works of Ohio State faculty, staff, and students. Verified live
-      returning DSpace 7.6 metadata.
+      REST API for the Knowledge Bank, Ohio State University Libraries' DSpace 7.6 institutional
+      repository. Exposes communities, collections, items and bitstreams as HAL JSON. Verified live
+      2026-09-01 returning dspaceName "The Knowledge Bank". The DSpace contract is DSpace's and
+      the hosting is Atmire's; no DSpace specification is saved under Ohio State's slug.
     humanURL: https://library.osu.edu/kb
     baseURL: https://kb.osu.edu/server/api
     tags: [ Library, Institutional Repository, DSpace, Open Access, REST ]
@@ -71,46 +230,135 @@ apis:
         url: https://github.com/osulibraries/DSpaceOSUKB
   - aid: ohio-state-university:kb-oai
     name: Knowledge Bank OAI-PMH Interface
+    x-operator: tenant
+    x-operator-basis: >-
+      CNAME — kb.osu.edu resolves to osu-prod.cname.atmire.com. Same tenancy as the DSpace REST
+      API above; the OAI-PMH implementation ships with DSpace.
     description: >-
-      OAI-PMH 2.0 metadata harvesting endpoint for the Knowledge Bank
-      institutional repository. Supports the standard OAI verbs (Identify,
-      ListRecords, ListSets, etc.) for harvesting Dublin Core and other metadata
-      formats. Verified live with an earliest datestamp of 2003.
+      OAI-PMH 2.0 metadata harvesting endpoint for the Knowledge Bank institutional repository,
+      supporting the standard verbs over Dublin Core and other formats. Verified live 2026-09-01:
+      repositoryName "The Knowledge Bank", protocolVersion 2.0, adminEmail libkbhelp@lists.osu.edu,
+      earliestDatestamp 2003-07-11. The harvestable metadata is Ohio State's; the protocol
+      implementation is DSpace's.
     humanURL: https://library.osu.edu/kb/faqs
     baseURL: https://kb.osu.edu/server/oai/request
     tags: [ Library, Institutional Repository, OAI-PMH, Metadata, Open Access ]
     properties:
       - type: Documentation
         url: https://library.osu.edu/kb/faqs
-      - type: GitHub
-        url: https://github.com/osulibraries/DSpaceOSUKB
-  - aid: ohio-state-university:websso
-    name: Web Single Sign-On (Shibboleth)
+      - type: Conformance
+        url: conformance/ohio-state-university-conformance.yml
+  - aid: ohio-state-university:primo-discovery
+    name: Library Discovery (Ex Libris Primo VE)
+    x-operator: tenant
+    x-operator-basis: >-
+      CNAME — search.library.osu.edu resolves to ohiolink-osu.primo.exlibrisgroup.com, an Ex Libris
+      Primo VE instance in the OhioLINK consortium view 01OHIOLINK_OSU. Ohio State's hostname,
+      Ex Libris's platform, OhioLINK's consortial tenancy.
     description: >-
-      Institution-wide web authentication and authorization service operated by
-      the Office of Technology and Digital Innovation, built on Shibboleth and
-      currently supporting the SAML 2.0 standard with InCommon Federation
-      membership. Used by campus and cloud-based applications to authenticate
-      Ohio State name.# accounts. Intended for registered campus service owners
-      rather than open public consumption.
-    humanURL: https://cybersecurity.osu.edu/services/web-single-sign
-    tags: [ Identity, Authentication, SAML, Shibboleth, SSO ]
+      Library discovery for Ohio State University Libraries, delivered on Ex Libris Primo VE
+      through the OhioLINK consortium (view 01OHIOLINK_OSU). Recorded as a tenancy because the
+      collection and the institutional scope are Ohio State's; the Primo and Alma APIs belong to
+      Ex Libris and are not saved here.
+    humanURL: https://search.library.osu.edu/
+    tags: [ Library, Discovery, Primo, Ex Libris, OhioLINK ]
     properties:
       - type: Documentation
-        url: https://cybersecurity.osu.edu/services/web-single-sign
-      - type: Documentation
-        url: https://dst-docs.it.osu.edu/websso/public/faq.html
+        url: https://library.osu.edu/
+  - aid: ohio-state-university:canvas-lms
+    name: Canvas LMS Tenancy
+    x-operator: tenant
+    x-operator-basis: >-
+      osu.instructure.com is an institution-specific subdomain on Instructure's shared Canvas
+      platform. Probed 2026-09-01: it redirects to Ohio State's own Shibboleth IdP for
+      authentication, which is exactly the tenant shape — the institution's identities on the
+      vendor's platform.
+    description: >-
+      Ohio State's Canvas learning management system tenancy, branded Carmen. Canvas exposes an
+      LTI-capable REST API, but that contract is Instructure's and every course-scoped call
+      requires an Ohio State account, so nothing is saved under Ohio State's slug. Recorded because
+      the tenancy is a real institutional fact and the SSO redirect evidences Ohio State's own IdP
+      behind it.
+    humanURL: https://osu.instructure.com/
+    tags: [ LMS, Canvas, Instructure, Teaching and Learning, SSO ]
+  - aid: ohio-state-university:datacite-membership
+    name: DataCite Membership (GVUZ)
+    x-operator: registry
+    x-operator-basis: >-
+      api.datacite.org is an identifier registry Ohio State is registered in, shared by every
+      DOI-minting institution. The membership record is a fact about Ohio State; the registry's
+      own contract is DataCite's and is not saved here.
+    description: >-
+      The Ohio State University is a DataCite direct member, provider symbol GVUZ, active, linked
+      to ROR https://ror.org/00rs6vg23 and created 2025-06-18. It operates one registered
+      repository, gvuz.dcavye (CHRR CKAN Repository), minting DOIs under prefix 10.82271 against
+      datasets published on Ohio State's own CKAN portal. Verified live 2026-09-01.
+    humanURL: https://chrr.osu.edu/
+    baseURL: https://api.datacite.org/providers/gvuz
+    tags: [ DOI, DataCite, Research Data, Registry, Persistent Identifiers ]
+    properties:
+      - type: Examples
+        url: examples/ohio-state-university-datacite-provider-example.json
+      - type: Conformance
+        url: conformance/ohio-state-university-conformance.yml
+  - aid: ohio-state-university:crossref-membership
+    name: Crossref Membership (member 7412)
+    x-operator: registry
+    x-operator-basis: >-
+      api.crossref.org is an identifier registry Ohio State University Libraries is registered in.
+      Membership recorded; the registry's contract is Crossref's.
+    description: >-
+      The Ohio State University Libraries is Crossref member 7412 with 4,927 registered DOIs,
+      covering the journals and scholarly series the Libraries publishes. Verified live 2026-09-01
+      through the Crossref members API.
+    humanURL: https://www.crossref.org/
+    baseURL: https://api.crossref.org/members/7412
+    tags: [ DOI, Crossref, Scholarly Publishing, Registry, Persistent Identifiers ]
+  - aid: ohio-state-university:ror
+    name: ROR Registration
+    x-operator: registry
+    x-operator-basis: >-
+      ror.org is the Research Organization Registry, shared by every registered research
+      organization. The record is a fact about Ohio State.
+    description: >-
+      The Ohio State University is registered in the Research Organization Registry as
+      https://ror.org/00rs6vg23, the identifier DataCite's provider record for Ohio State points
+      at. Separate ROR records exist for the Wexner Medical Center and the regional campuses, which
+      is why organisation matching on name alone misattributes Ohio State surfaces.
+    humanURL: https://ror.org/00rs6vg23
+    baseURL: https://api.ror.org/organizations/00rs6vg23
+    tags: [ Registry, ROR, Persistent Identifiers, Research ]
 common:
-  - type: DomainSecurity
-    url: security/ohio-state-university-domain-security.yml
   - type: Website
     url: https://www.osu.edu/
-  - type: GitHub
+  - type: Blog
+    url: https://news.osu.edu/
+  - type: GitHubOrganization
     url: https://github.com/osulibraries
   - type: LinkedIn
     url: https://www.linkedin.com/school/the-ohio-state-university/
+  - type: PrivacyPolicy
+    url: https://it.osu.edu/privacy
+  - type: CourseCatalog
+    url: https://classes.osu.edu/
+  - type: OpenData
+    url: https://data.chrr.ohio-state.edu/
+  - type: ResearchRepository
+    url: https://kb.osu.edu/
+  - type: LibraryCatalog
+    url: https://search.library.osu.edu/
+  - type: IdentityFederation
+    url: https://mdq.incommon.org/entities/urn%3Amace%3Aincommon%3Aosu.edu
+  - type: AIPolicy
+    url: https://ohiostateresearch.knowledgebase.co/article/artificial-intelligence-40;ai-41;-in-research-guidelines-126.html
+  - type: AITooling
+    url: https://ai.osu.edu/resources-buckeyes/approved-ai-tools
   - type: Authentication
-    url: https://cybersecurity.osu.edu/services/web-single-sign
+    url: authentication/ohio-state-university-authentication.yml
+  - type: Conformance
+    url: conformance/ohio-state-university-conformance.yml
+  - type: DomainSecurity
+    url: security/ohio-state-university-domain-security.yml
   - type: Plans
     url: plans/ohio-state-university-plans-pricing.yml
   - type: RateLimits
