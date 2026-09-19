@@ -349,6 +349,8 @@ apis:
   humanURL: https://classes.osu.edu/
   baseURL: https://content.osu.edu/v2
   tags:
+  - Classes
+  tags_raw:
   - classes
   properties:
   - type: OpenAPI
@@ -365,6 +367,8 @@ apis:
   humanURL: https://classes.osu.edu/
   baseURL: https://content.osu.edu/v2
   tags:
+  - Event
+  tags_raw:
   - events
   properties:
   - type: OpenAPI
