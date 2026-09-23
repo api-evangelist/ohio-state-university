@@ -1,0 +1,38 @@
+{
+  "x-provenance": {
+    "generated": "2026-09-01",
+    "method": "probed",
+    "source": "https://content.osu.edu/v2/classes/searchableTermsV2",
+    "status": 200,
+    "note": "Live response captured from the operator's endpoint on the date above and trimmed for size. Not authored by API Evangelist and not authored by Ohio State as documentation."
+  },
+  "request": {
+    "method": "GET",
+    "url": "https://content.osu.edu/v2/classes/searchableTermsV2"
+  },
+  "response": {
+    "data": {
+      "_id": "sis:searchableTerms",
+      "_rev": "92-6b17acb70881338b3b99f6ad729e5872",
+      "data": [
+        {
+          "strm": "1264",
+          "descr": "Summer 2026",
+          "descrlong": "2026 Sum",
+          "classSearch": "Y",
+          "startDate": "2026-01-26",
+          "endDate": "2027-01-01"
+        },
+        {
+          "strm": "1268",
+          "descr": "Autumn 2026",
+          "descrlong": "2026 Autmn",
+          "classSearch": "Y",
+          "startDate": "2026-02-09",
+          "endDate": "2027-01-31"
+        }
+      ],
+      "updated": "2026-09-01T14:57:12.743Z"
+    }
+  }
+}

@@ -1,0 +1,2053 @@
+{
+  "x-provenance": {
+    "generated": "2026-09-01",
+    "method": "probed",
+    "source": "https://content.osu.edu/v2/classes/search?q=english&term=1268&p=1",
+    "status": 200,
+    "note": "Live response captured from the operator's endpoint on the date above and trimmed for size. Not authored by API Evangelist and not authored by Ohio State as documentation."
+  },
+  "request": {
+    "method": "GET",
+    "url": "https://content.osu.edu/v2/classes/search?q=english&term=1268&p=1"
+  },
+  "response": {
+    "data": {
+      "totalItems": 1033,
+      "currentItemCount": 200,
+      "page": 1,
+      "totalPages": 6,
+      "refineQueryTemplate": "q=_QUERY_&term=1268&p=1",
+      "nextPageLink": "?q=english&term=1268&p=2",
+      "prevPageLink": null,
+      "activeSort": "",
+      "sort": [
+        {
+          "key": "",
+          "title": "Relevance",
+          "type": "amount",
+          "direction": "desc",
+          "link": "?q=english&term=1268&p=1&sort="
+        },
+        {
+          "key": "subject",
+          "title": "Subject",
+          "type": "alpha",
+          "direction": "asc",
+          "link": "?q=english&term=1268&p=1&sort=subject"
+        },
+        {
+          "key": "-subject",
+          "title": "Subject",
+          "type": "alpha",
+          "direction": "desc",
+          "link": "?q=english&term=1268&p=1&sort=-subject"
+        },
+        {
+          "key": "catalogNumber",
+          "title": "Catalog Number",
+          "type": "numeric",
+          "direction": "asc",
+          "link": "?q=english&term=1268&p=1&sort=catalogNumber"
+        },
+        {
+          "key": "-catalogNumber",
+          "title": "Catalog Number",
+          "type": "numeric",
+          "direction": "desc",
+          "link": "?q=english&term=1268&p=1&sort=-catalogNumber"
+        }
+      ],
+      "filters": [
+        {
+          "title": "Campus",
+          "slug": "campus",
+          "items": [
+            {
+              "title": "Columbus",
+              "term": "col",
+              "count": 833,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&campus=col",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Lima",
+              "term": "lma",
+              "count": 32,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&campus=lma",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Mansfield",
+              "term": "mns",
+              "count": 28,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&campus=mns",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Marion",
+              "term": "mrn",
+              "count": 34,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&campus=mrn",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Newark",
+              "term": "nwk",
+              "count": 77,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&campus=nwk",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Wooster",
+              "term": "wst",
+              "count": 29,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&campus=wst",
+              "removeLink": "?q=english&term=1268&p=1"
+            }
+          ]
+        },
+        {
+          "title": "Term",
+          "slug": "term",
+          "items": [
+            {
+              "title": "Autumn 2026",
+              "term": "1268",
+              "count": 1033,
+              "selected": true,
+              "link": "?q=english&term=1268&p=1",
+              "removeLink": "?q=english&p=1"
+            }
+          ]
+        },
+        {
+          "title": "Class Session",
+          "slug": "class-session",
+          "items": [
+            {
+              "title": "Regular Academic Term",
+              "term": "1",
+              "count": 978,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&class-session=1",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Session 2",
+              "term": "7w2",
+              "count": 49,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&class-session=7w2",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Session 1",
+              "term": "7w1",
+              "count": 6,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&class-session=7w1",
+              "removeLink": "?q=english&term=1268&p=1"
+            }
+          ]
+        },
+        {
+          "title": "Academic Career",
+          "slug": "academic-career",
+          "items": [
+            {
+              "title": "Undergraduate",
+              "term": "ugrd",
+              "count": 964,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&academic-career=ugrd",
+              "removeLink": "?q=english&term=1268&p=1"
+            }
+          ]
+        },
+        {
+          "title": "GEN Categories",
+          "slug": "gen-categories",
+          "items": [
+            {
+              "title": "GEN Foundation: Writing and Information Literacy",
+              "term": "GEN Foundation: Writing and Information Literacy",
+              "count": 150,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&gen-categories=GEN%20Foundation%3A%20Writing%20and%20Information%20Literacy",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "GEN Foundation: Historical and Cultural Studies",
+              "term": "GEN Foundation: Historical and Cultural Studies",
+              "count": 87,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&gen-categories=GEN%20Foundation%3A%20Historical%20and%20Cultural%20Studies",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "GEN Foundation: Literary, Visual & Performing Arts",
+              "term": "GEN Foundation: Literary, Visual & Performing Arts",
+              "count": 87,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&gen-categories=GEN%20Foundation%3A%20Literary%2C%20Visual%20%26%20Performing%20Arts",
+              "removeLink": "?q=english&term=1268&p=1"
+            }
+          ]
+        },
+        {
+          "title": "Subject",
+          "slug": "subject",
+          "items": [
+            {
+              "title": "Art Education",
+              "term": "arteduc",
+              "count": 20,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&subject=arteduc",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Business Admin : Mgmt & HR",
+              "term": "busmhr",
+              "count": 39,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&subject=busmhr",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Comparative Studies",
+              "term": "compstd",
+              "count": 34,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&subject=compstd",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Disability Studies",
+              "term": "dsablst",
+              "count": 10,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&subject=dsablst",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "English",
+              "term": "english",
+              "count": 369,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&subject=english",
+              "removeLink": "?term=1268&p=1"
+            },
+            {
+              "title": "Film Studies",
+              "term": "filmstd",
+              "count": 2,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&subject=filmstd",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "History",
+              "term": "history",
+              "count": 371,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&subject=history",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Jewish Studies",
+              "term": "jewshst",
+              "count": 3,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&subject=jewshst",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Religious Studies",
+              "term": "relstds",
+              "count": 11,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&subject=relstds",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "tlielp",
+              "term": "tlielp",
+              "count": 17,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&subject=tlielp",
+              "removeLink": "?q=english&term=1268&p=1"
+            }
+          ]
+        },
+        {
+          "title": "Academic Program",
+          "slug": "academic-program",
+          "items": [
+            {
+              "title": "Arts and Sciences",
+              "term": "asc",
+              "count": 917,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&academic-program=asc",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Business",
+              "term": "bus",
+              "count": 39,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&academic-program=bus",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Education & Human Ecology",
+              "term": "ehe",
+              "count": 48,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&academic-program=ehe",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Food, Agric & Environ Science",
+              "term": "agr",
+              "count": 20,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&academic-program=agr",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "John Glenn School of Pub Aff",
+              "term": "jgs",
+              "count": 2,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&academic-program=jgs",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Pharmacy",
+              "term": "phr",
+              "count": 2,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&academic-program=phr",
+              "removeLink": "?q=english&term=1268&p=1"
+            }
+          ]
+        },
+        {
+          "title": "Instruction Mode",
+          "slug": "instruction-mode",
+          "items": [
+            {
+              "title": "In Person",
+              "term": "p",
+              "count": 788,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&instruction-mode=p",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Distance Learning",
+              "term": "dl",
+              "count": 204,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&instruction-mode=dl",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Hybrid Delivery",
+              "term": "hy",
+              "count": 41,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&instruction-mode=hy",
+              "removeLink": "?q=english&term=1268&p=1"
+            }
+          ]
+        },
+        {
+          "title": "Class Attribute",
+          "slug": "class-attribute",
+          "items": [
+            {
+              "title": "General Education - Legacy",
+              "term": "ge",
+              "count": 648,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&class-attribute=ge",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "General Education - New",
+              "term": "ge2",
+              "count": 548,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&class-attribute=ge2",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "College Credit Plus",
+              "term": "ccp",
+              "count": 517,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&class-attribute=ccp",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "ODHE Ohio Transfer 36",
+              "term": "otm",
+              "count": 168,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&class-attribute=otm",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Credit By Exam",
+              "term": "exam",
+              "count": 85,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&class-attribute=exam",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "ODHE Ohio Transfer 36",
+              "term": "tag",
+              "count": 64,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&class-attribute=tag",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Affordable Learning Exchange",
+              "term": "alx",
+              "count": 55,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&class-attribute=alx",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Honors Course",
+              "term": "hon",
+              "count": 24,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&class-attribute=hon",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Course Fee",
+              "term": "crsf",
+              "count": 10,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&class-attribute=crsf",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "civ",
+              "term": "civ",
+              "count": 1,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&class-attribute=civ",
+              "removeLink": "?q=english&term=1268&p=1"
+            }
+          ]
+        },
+        {
+          "title": "Class Attribute Value",
+          "slug": "class-attribute-value",
+          "items": [
+            {
+              "title": "Not eligible for College Credit Plus program",
+              "term": "Not eligible for College Credit Plus program",
+              "count": 337,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&class-attribute-value=Not%20eligible%20for%20College%20Credit%20Plus%20program",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Level 1 CCP course",
+              "term": "Level 1 CCP course",
+              "count": 180,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&class-attribute-value=Level%201%20CCP%20course",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "GEN Foundation: Writing and Information Literacy",
+              "term": "GEN Foundation: Writing and Information Literacy",
+              "count": 150,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&class-attribute-value=GEN%20Foundation%3A%20Writing%20and%20Information%20Literacy",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "GEL Writing and Communication: level 1",
+              "term": "GEL Writing and Communication: level 1",
+              "count": 112,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&class-attribute-value=GEL%20Writing%20and%20Communication%3A%20level%201",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Ohio Transfer 36 - First Writing Course",
+              "term": "Ohio Transfer 36 - First Writing Course",
+              "count": 112,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&class-attribute-value=Ohio%20Transfer%2036%20-%20First%20Writing%20Course",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "GEL Diversity: Global Studies",
+              "term": "GEL Diversity: Global Studies",
+              "count": 94,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&class-attribute-value=GEL%20Diversity%3A%20Global%20Studies",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "GEL Writing and Communication: level 2",
+              "term": "GEL Writing and Communication: level 2",
+              "count": 94,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&class-attribute-value=GEL%20Writing%20and%20Communication%3A%20level%202",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "GEL Diversity: Social Diversity in the US",
+              "term": "GEL Diversity: Social Diversity in the US",
+              "count": 93,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&class-attribute-value=GEL%20Diversity%3A%20Social%20Diversity%20in%20the%20US",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "GEN Foundation: Historical and Cultural Studies",
+              "term": "GEN Foundation: Historical and Cultural Studies",
+              "count": 87,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&class-attribute-value=GEN%20Foundation%3A%20Historical%20and%20Cultural%20Studies",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "GEN Foundation: Literary, Visual & Performing Arts",
+              "term": "GEN Foundation: Literary, Visual & Performing Arts",
+              "count": 87,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&class-attribute-value=GEN%20Foundation%3A%20Literary%2C%20Visual%20%26%20Performing%20Arts",
+              "removeLink": "?q=english&term=1268&p=1"
+            }
+          ]
+        },
+        {
+          "title": "Component",
+          "slug": "component",
+          "items": [
+            {
+              "title": "Lecture",
+              "term": "lec",
+              "count": 609,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&component=lec",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Independent Study",
+              "term": "ind",
+              "count": 298,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&component=ind",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Seminar",
+              "term": "sem",
+              "count": 50,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&component=sem",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Recitation",
+              "term": "rec",
+              "count": 45,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&component=rec",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Field Experience",
+              "term": "fld",
+              "count": 13,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&component=fld",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Laboratory",
+              "term": "lab",
+              "count": 12,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&component=lab",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Workshop",
+              "term": "wrk",
+              "count": 6,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&component=wrk",
+              "removeLink": "?q=english&term=1268&p=1"
+            }
+          ]
+        },
+        {
+          "title": "Catalog Number",
+          "slug": "catalog-number",
+          "items": [
+            {
+              "title": "1XXX",
+              "term": "1xxx",
+              "count": 171,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&catalog-number=1xxx",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "2XXX",
+              "term": "2xxx",
+              "count": 296,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&catalog-number=2xxx",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "3XXX",
+              "term": "3xxx",
+              "count": 274,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&catalog-number=3xxx",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "4XXX",
+              "term": "4xxx",
+              "count": 209,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&catalog-number=4xxx",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "5XXX",
+              "term": "5xxx",
+              "count": 51,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&catalog-number=5xxx",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "6XXX",
+              "term": "6xxx",
+              "count": 17,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&catalog-number=6xxx",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "7XXX",
+              "term": "7xxx",
+              "count": 10,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&catalog-number=7xxx",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "8XXX",
+              "term": "8xxx",
+              "count": 5,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&catalog-number=8xxx",
+              "removeLink": "?q=english&term=1268&p=1"
+            }
+          ]
+        },
+        {
+          "title": "Evening",
+          "slug": "evening",
+          "items": [
+            {
+              "title": "Daytime",
+              "term": "Daytime",
+              "count": 571,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&evening=Daytime",
+              "removeLink": "?q=english&term=1268&p=1"
+            },
+            {
+              "title": "Evening",
+              "term": "Evening",
+              "count": 16,
+              "selected": false,
+              "link": "?q=english&term=1268&p=1&evening=Evening",
+              "removeLink": "?q=english&term=1268&p=1"
+            }
+          ]
+        }
+      ],
+      "activeFilters": [
+        {
+          "name": "Term",
+          "slug": "term",
+          "value": "Autumn 2026",
+          "rawValue": "1268",
+          "removeLink": "?q=english&p=1"
+        }
+      ],
+      "courses": [
+        {
+          "course": {
+            "term": "Autumn 2026",
+            "effectiveDate": "2012-06-01",
+            "effectiveStatus": "A",
+            "title": "Intensive Writing and Reading",
+            "shortDescription": "Writing & Reading",
+            "description": "Provides intensive practice in integrating academic reading and writing. Credit may not count toward graduation in some degree programs.\r\nPrereq: English Placement Test score of 6. Not open to students with credit for 1110.01 (110.01), 1110.01H (110.01H), 1110.02 (110.02), 1110.02H (110.02H), 052, 060, or 110.03, or equiv.",
+            "equivalentId": "",
+            "allowMultiEnroll": "N",
+            "maxUnits": 4,
+            "minUnits": 4,
+            "repeatUnitsLimit": 4,
+            "grading": "Graded",
+            "component": "Lecture",
+            "primaryComponent": "LEC",
+            "offeringNumber": "5",
+            "academicGroup": "Arts and Sciences",
+            "subject": "ENGLISH",
+            "catalogNumber": "1109",
+            "campus": "Newark",
+            "academicOrg": "D0971",
+            "academicCareer": "Undergraduate",
+            "cipCode": "23.0101",
+            "courseAttributes": [
+              {
+                "name": "CCP",
+                "value": "NON-CCP",
+                "description": "Not eligible for College Credit Plus program"
+              }
+            ],
+            "campusCode": "NWK",
+            "catalogLevel": "1xxx",
+            "subjectDesc": "English",
+            "courseId": "150409"
+          },
+          "sections": [
+            {
+              "classNumber": "26511",
+              "section": "0100",
+              "component": "Lecture",
+              "instructionMode": "Hybrid Delivery",
+              "meetings": [
+                {
+                  "meetingNumber": 1,
+                  "facilityId": "RS0143",
+                  "facilityType": "1A",
+                  "facilityDescription": "Reese Center",
+                  "facilityDescriptionShort": "Reese Ctr",
+                  "facilityGroup": false,
+                  "facilityCapacity": 16,
+                  "buildingCode": "585",
+                  "room": "143",
+                  "buildingDescription": "Reese Ctr 143",
+                  "buildingDescriptionShort": "RS 143",
+                  "startTime": "9:35 am",
+                  "endTime": "10:55 am",
+                  "startDate": "2026-08-25",
+                  "endDate": "2026-12-09",
+                  "monday": false,
+                  "tuesday": true,
+                  "wednesday": false,
+                  "thursday": true,
+                  "friday": false,
+                  "saturday": false,
+                  "sunday": false,
+                  "standingMeetingPattern": null,
+                  "instructors": [
+                    {
+                      "displayName": "Paul Douglas McCormick",
+                      "role": "PI",
+                      "email": "mccormick.150@osu.edu"
+                    }
+                  ]
+                },
+                {
+                  "meetingNumber": 2,
+                  "facilityId": "RS0143",
+                  "facilityType": "1A",
+                  "facilityDescription": "Reese Center",
+                  "facilityDescriptionShort": "Reese Ctr",
+                  "facilityGroup": false,
+                  "facilityCapacity": 16,
+                  "buildingCode": "585",
+                  "room": "143",
+                  "buildingDescription": "Reese Ctr 143",
+                  "buildingDescriptionShort": "RS 143",
+                  "startTime": "9:10 am",
+                  "endTime": "10:05 am",
+                  "startDate": "2026-08-25",
+                  "endDate": "2026-12-09",
+                  "monday": false,
+                  "tuesday": false,
+                  "wednesday": false,
+                  "thursday": false,
+                  "friday": true,
+                  "saturday": false,
+                  "sunday": false,
+                  "standingMeetingPattern": null,
+                  "instructors": [
+                    {
+                      "displayName": "Paul Douglas McCormick",
+                      "role": "PI",
+                      "email": "mccormick.150@osu.edu"
+                    }
+                  ]
+                }
+              ],
+              "courseOfferingNumber": 5,
+              "courseId": "150409",
+              "academicGroup": "ASC",
+              "subject": "English",
+              "catalogNumber": "1109",
+              "career": "UGRD",
+              "description": "Writing & Reading",
+              "enrollmentStatus": "Closed",
+              "status": "A",
+              "type": "E",
+              "associatedClass": "100",
+              "autoEnrollWaitlist": true,
+              "autoEnrollSection1": null,
+              "autoEnrollSection2": null,
+              "consent": false,
+              "waitlistCapacity": 999,
+              "minimumEnrollment": 0,
+              "enrollmentTotal": 15,
+              "waitlistTotal": 0,
+              "academicOrg": "D0971",
+              "location": "CS-NEWARK",
+              "equivalentCourseId": null,
+              "startDate": "2026-08-25",
+              "endDate": "2026-12-09",
+              "cancelDate": null,
+              "primaryInstructorSection": "0100",
+              "combinedSection": null,
+              "holidaySchedule": "OSUSIS",
+              "sessionCode": "1",
+              "sessionDescription": "Regular Academic Term",
+              "term": "Autumn 2026",
+              "campus": "Newark",
+              "attributes": [
+                {
+                  "name": "CCP",
+                  "value": "NON-CCP",
+                  "description": "Not eligible for College Credit Plus program"
+                }
+              ],
+              "secCampus": "NWK",
+              "secAcademicGroup": "ASC",
+              "secCatalogNumber": "1109",
+              "meetingDays": "",
+              "_parent": "150409-5-1268",
+              "subjectDesc": "English",
+              "courseTitle": "Intensive Writing and Reading",
+              "courseDescription": "Provides intensive practice in integrating academic reading and writing. Credit may not count toward graduation in some degree programs.\r\nPrereq: English Placement Test score of 6. Not open to students with credit for 1110.01 (110.01), 1110.01H (110.01H), 1110.02 (110.02), 1110.02H (110.02H), 052, 060, or 110.03, or equiv.",
+              "catalogLevel": "1xxx",
+              "termCode": "1268"
+            },
+            {
+              "classNumber": "26512",
+              "section": "0120",
+              "component": "Lecture",
+              "instructionMode": "In Person",
+              "meetings": [
+                {
+                  "meetingNumber": 1,
+                  "facilityId": "LF0158",
+                  "facilityType": "1B",
+                  "facilityDescription": "Lefevre Hall",
+                  "facilityDescriptionShort": "Lefevre",
+                  "facilityGroup": false,
+                  "facilityCapacity": 20,
+                  "buildingCode": "676",
+                  "room": "158",
+                  "buildingDescription": "LeFevre 158",
+                  "buildingDescriptionShort": "LF 158",
+                  "startTime": "2:20 pm",
+                  "endTime": "3:40 pm",
+                  "startDate": "2026-08-25",
+                  "endDate": "2026-12-09",
+                  "monday": true,
+                  "tuesday": false,
+                  "wednesday": true,
+                  "thursday": false,
+                  "friday": false,
+                  "saturday": false,
+                  "sunday": false,
+                  "standingMeetingPattern": null,
+                  "instructors": [
+                    {
+                      "displayName": "Matthew V Tidwell",
+                      "role": "PI",
+                      "email": "tidwell.16@osu.edu"
+                    }
+                  ]
+                },
+                {
+                  "meetingNumber": 2,
+                  "facilityId": "LF0158",
+                  "facilityType": "1B",
+                  "facilityDescription": "Lefevre Hall",
+                  "facilityDescriptionShort": "Lefevre",
+                  "facilityGroup": false,
+                  "facilityCapacity": 20,
+                  "buildingCode": "676",
+                  "room": "158",
+                  "buildingDescription": "LeFevre 158",
+                  "buildingDescriptionShort": "LF 158",
+                  "startTime": "3:00 pm",
+                  "endTime": "3:55 pm",
+                  "startDate": "2026-08-25",
+                  "endDate": "2026-12-09",
+                  "monday": false,
+                  "tuesday": false,
+                  "wednesday": false,
+                  "thursday": false,
+                  "friday": true,
+                  "saturday": false,
+                  "sunday": false,
+                  "standingMeetingPattern": null,
+                  "instructors": [
+                    {
+                      "displayName": "Matthew V Tidwell",
+                      "role": "PI",
+                      "email": "tidwell.16@osu.edu"
+                    }
+                  ]
+                }
+              ],
+              "courseOfferingNumber": 5,
+              "courseId": "150409",
+              "academicGroup": "ASC",
+              "subject": "English",
+              "catalogNumber": "1109",
+              "career": "UGRD",
+              "description": "Writing & Reading",
+              "enrollmentStatus": "Closed",
+              "status": "A",
+              "type": "E",
+              "associatedClass": "100",
+              "autoEnrollWaitlist": true,
+              "autoEnrollSection1": null,
+              "autoEnrollSection2": null,
+              "consent": false,
+              "waitlistCapacity": 999,
+              "minimumEnrollment": 0,
+              "enrollmentTotal": 15,
+              "waitlistTotal": 0,
+              "academicOrg": "D0971",
+              "location": "CS-NEWARK",
+              "equivalentCourseId": null,
+              "startDate": "2026-08-25",
+              "endDate": "2026-12-09",
+              "cancelDate": null,
+              "primaryInstructorSection": "0100",
+              "combinedSection": null,
+              "holidaySchedule": "OSUSIS",
+              "sessionCode": "1",
+              "sessionDescription": "Regular Academic Term",
+              "term": "Autumn 2026",
+              "campus": "Newark",
+              "attributes": [
+                {
+                  "name": "CCP",
+                  "value": "NON-CCP",
+                  "description": "Not eligible for College Credit Plus program"
+                }
+              ],
+              "secCampus": "NWK",
+              "secAcademicGroup": "ASC",
+              "secCatalogNumber": "1109",
+              "meetingDays": "",
+              "_parent": "150409-5-1268",
+              "subjectDesc": "English",
+              "courseTitle": "Intensive Writing and Reading",
+              "courseDescription": "Provides intensive practice in integrating academic reading and writing. Credit may not count toward graduation in some degree programs.\r\nPrereq: English Placement Test score of 6. Not open to students with credit for 1110.01 (110.01), 1110.01H (110.01H), 1110.02 (110.02), 1110.02H (110.02H), 052, 060, or 110.03, or equiv.",
+              "catalogLevel": "1xxx",
+              "termCode": "1268"
+            },
+            {
+              "classNumber": "28778",
+              "section": "0170",
+              "component": "Lecture",
+              "instructionMode": "In Person",
+              "meetings": [
+                {
+                  "meetingNumber": 1,
+                  "facilityId": "RS0141",
+                  "facilityType": "6L",
+                  "facilityDescription": "Reese Center",
+                  "facilityDescriptionShort": "Reese Ctr",
+                  "facilityGroup": false,
+                  "facilityCapacity": 20,
+                  "buildingCode": "585",
+                  "room": "141",
+                  "buildingDescription": "Reese Ctr 141",
+                  "buildingDescriptionShort": "RS 141",
+                  "startTime": "11:10 am",
+                  "endTime": "12:30 pm",
+                  "startDate": "2026-08-25",
+                  "endDate": "2026-12-09",
+                  "monday": false,
+                  "tuesday": true,
+                  "wednesday": false,
+                  "thursday": true,
+                  "friday": false,
+                  "saturday": false,
+                  "sunday": false,
+                  "standingMeetingPattern": null,
+                  "instructors": [
+                    {
+                      "displayName": "Michael A Trovato",
+                      "role": "PI",
+                      "email": "trovato.2@osu.edu"
+                    }
+                  ]
+                },
+                {
+                  "meetingNumber": 2,
+                  "facilityId": "RS0141",
+                  "facilityType": "6L",
+                  "facilityDescription": "Reese Center",
+                  "facilityDescriptionShort": "Reese Ctr",
+                  "facilityGroup": false,
+                  "facilityCapacity": 20,
+                  "buildingCode": "585",
+                  "room": "141",
+                  "buildingDescription": "Reese Ctr 141",
+                  "buildingDescriptionShort": "RS 141",
+                  "startTime": "11:30 am",
+                  "endTime": "12:25 pm",
+                  "startDate": "2026-08-25",
+                  "endDate": "2026-12-09",
+                  "monday": false,
+                  "tuesday": false,
+                  "wednesday": false,
+                  "thursday": false,
+                  "friday": true,
+                  "saturday": false,
+                  "sunday": false,
+                  "standingMeetingPattern": null,
+                  "instructors": [
+                    {
+                      "displayName": "Michael A Trovato",
+                      "role": "PI",
+                      "email": "trovato.2@osu.edu"
+                    }
+                  ]
+                }
+              ],
+              "courseOfferingNumber": 5,
+              "courseId": "150409",
+              "academicGroup": "ASC",
+              "subject": "English",
+              "catalogNumber": "1109",
+              "career": "UGRD",
+              "description": "Writing & Reading",
+              "enrollmentStatus": "Closed",
+              "status": "A",
+              "type": "E",
+              "associatedClass": "100",
+              "autoEnrollWaitlist": true,
+              "autoEnrollSection1": null,
+              "autoEnrollSection2": null,
+              "consent": false,
+              "waitlistCapacity": 999,
+              "minimumEnrollment": 0,
+              "enrollmentTotal": 15,
+              "waitlistTotal": 0,
+              "academicOrg": "D0971",
+              "location": "CS-NEWARK",
+              "equivalentCourseId": null,
+              "startDate": "2026-08-25",
+              "endDate": "2026-12-09",
+              "cancelDate": null,
+              "primaryInstructorSection": "0100",
+              "combinedSection": null,
+              "holidaySchedule": "OSUSIS",
+              "sessionCode": "1",
+              "sessionDescription": "Regular Academic Term",
+              "term": "Autumn 2026",
+              "campus": "Newark",
+              "attributes": [
+                {
+                  "name": "CCP",
+                  "value": "NON-CCP",
+                  "description": "Not eligible for College Credit Plus program"
+                }
+              ],
+              "secCampus": "NWK",
+              "secAcademicGroup": "ASC",
+              "secCatalogNumber": "1109",
+              "meetingDays": "",
+              "_parent": "150409-5-1268",
+              "subjectDesc": "English",
+              "courseTitle": "Intensive Writing and Reading",
+              "courseDescription": "Provides intensive practice in integrating academic reading and writing. Credit may not count toward graduation in some degree programs.\r\nPrereq: English Placement Test score of 6. Not open to students with credit for 1110.01 (110.01), 1110.01H (110.01H), 1110.02 (110.02), 1110.02H (110.02H), 052, 060, or 110.03, or equiv.",
+              "catalogLevel": "1xxx",
+              "termCode": "1268"
+            },
+            {
+              "classNumber": "28781",
+              "section": "0200",
+              "component": "Lecture",
+              "instructionMode": "In Person",
+              "meetings": [
+                {
+                  "meetingNumber": 1,
+                  "facilityId": "HRH2172",
+                  "facilityType": "1B",
+                  "facilityDescription": "Hodges Hall",
+                  "facilityDescriptionShort": "Hodges",
+                  "facilityGroup": false,
+                  "facilityCapacity": 24,
+                  "buildingCode": "628",
+                  "room": "2172",
+                  "buildingDescription": "Hodges Hall 2172",
+                  "buildingDescriptionShort": "HRH 2172",
+                  "startTime": "9:35 am",
+                  "endTime": "10:55 am",
+                  "startDate": "2026-08-25",
+                  "endDate": "2026-12-09",
+                  "monday": true,
+                  "tuesday": false,
+                  "wednesday": true,
+                  "thursday": false,
+                  "friday": false,
+                  "saturday": false,
+                  "sunday": false,
+                  "standingMeetingPattern": null,
+                  "instructors": [
+                    {
+                      "displayName": "Matthew V Tidwell",
+                      "role": "PI",
+                      "email": "tidwell.16@osu.edu"
+                    }
+                  ]
+                },
+                {
+                  "meetingNumber": 2,
+                  "facilityId": "HRH2172",
+                  "facilityType": "1B",
+                  "facilityDescription": "Hodges Hall",
+                  "facilityDescriptionShort": "Hodges",
+                  "facilityGroup": false,
+                  "facilityCapacity": 24,
+                  "buildingCode": "628",
+                  "room": "2172",
+                  "buildingDescription": "Hodges Hall 2172",
+                  "buildingDescriptionShort": "HRH 2172",
+                  "startTime": "9:10 am",
+                  "endTime": "10:05 am",
+                  "startDate": "2026-08-25",
+                  "endDate": "2026-12-09",
+                  "monday": false,
+                  "tuesday": false,
+                  "wednesday": false,
+                  "thursday": false,
+                  "friday": true,
+                  "saturday": false,
+                  "sunday": false,
+                  "standingMeetingPattern": null,
+                  "instructors": [
+                    {
+                      "displayName": "Matthew V Tidwell",
+                      "role": "PI",
+                      "email": "tidwell.16@osu.edu"
+                    }
+                  ]
+                }
+              ],
+              "courseOfferingNumber": 5,
+              "courseId": "150409",
+              "academicGroup": "ASC",
+              "subject": "English",
+              "catalogNumber": "1109",
+              "career": "UGRD",
+              "description": "Writing & Reading",
+              "enrollmentStatus": "Closed",
+              "status": "A",
+              "type": "E",
+              "associatedClass": "100",
+              "autoEnrollWaitlist": true,
+              "autoEnrollSection1": null,
+              "autoEnrollSection2": null,
+              "consent": false,
+              "waitlistCapacity": 999,
+              "minimumEnrollment": 0,
+              "enrollmentTotal": 15,
+              "waitlistTotal": 0,
+              "academicOrg": "D0971",
+              "location": "CS-NEWARK",
+              "equivalentCourseId": null,
+              "startDate": "2026-08-25",
+              "endDate": "2026-12-09",
+              "cancelDate": null,
+              "primaryInstructorSection": "0100",
+              "combinedSection": null,
+              "holidaySchedule": "OSUSIS",
+              "sessionCode": "1",
+              "sessionDescription": "Regular Academic Term",
+              "term": "Autumn 2026",
+              "campus": "Newark",
+              "attributes": [
+                {
+                  "name": "CCP",
+                  "value": "NON-CCP",
+                  "description": "Not eligible for College Credit Plus program"
+                }
+              ],
+              "secCampus": "NWK",
+              "secAcademicGroup": "ASC",
+              "secCatalogNumber": "1109",
+              "meetingDays": "",
+              "_parent": "150409-5-1268",
+              "subjectDesc": "English",
+              "courseTitle": "Intensive Writing and Reading",
+              "courseDescription": "Provides intensive practice in integrating academic reading and writing. Credit may not count toward graduation in some degree programs.\r\nPrereq: English Placement Test score of 6. Not open to students with credit for 1110.01 (110.01), 1110.01H (110.01H), 1110.02 (110.02), 1110.02H (110.02H), 052, 060, or 110.03, or equiv.",
+              "catalogLevel": "1xxx",
+              "termCode": "1268"
+            }
+          ]
+        },
+        {
+          "course": {
+            "term": "Autumn 2026",
+            "effectiveDate": "2022-08-22",
+            "effectiveStatus": "A",
+            "title": "First-Year English Composition",
+            "shortDescription": "First-Yr Engl Comp",
+            "description": "Practice in the fundamentals of expository writing, as illustrated in the student's own writing & in the essays of professional writers. May be available as a service learning course with five hours community service required at the Lima campus only.\nPrereq: EduTL1902 (108.01) or 1902.04 (108.01), or English Placement Level 4. Not open to students with credit for 1109 (109.01 or 109.02), 1110.01 (non-DL version), 1110.01H (110.01H), 1110.02 (110.02), 1110.02H (110.02H), 1110.03 (110.03), 1167H (167H ), 110.01.",
+            "equivalentId": "S3036",
+            "allowMultiEnroll": "N",
+            "maxUnits": 3,
+            "minUnits": 3,
+            "repeatUnitsLimit": 3,
+            "grading": "Graded",
+            "component": "Lecture",
+            "primaryComponent": "LEC",
+            "offeringNumber": "5",
+            "academicGroup": "Arts and Sciences",
+            "subject": "ENGLISH",
+            "catalogNumber": "1110.01",
+            "campus": "Newark",
+            "academicOrg": "D0971",
+            "academicCareer": "Undergraduate",
+            "cipCode": "23.1301",
+            "courseAttributes": [
+              {
+                "name": "CCP",
+                "value": "LEVEL 1",
+                "description": "Level 1 CCP course"
+              },
+              {
+                "name": "EXAM",
+                "value": "AP",
+                "description": "Advanced Placement Program"
+              },
+              {
+                "name": "GE",
+                "value": "WR1",
+                "description": "GEL Writing and Communication: level 1"
+              },
+              {
+                "name": "GE2",
+                "value": "F1",
+                "description": "GEN Foundation: Writing and Information Literacy"
+              }
+            ],
+            "campusCode": "NWK",
+            "catalogLevel": "1xxx",
+            "subjectDesc": "English",
+            "courseId": "150416"
+          },
+          "sections": [
+            {
+              "classNumber": "14961",
+              "section": "0020",
+              "component": "Lecture",
+              "instructionMode": "In Person",
+              "meetings": [
+                {
+                  "meetingNumber": 1,
+                  "facilityId": "RS0141",
+                  "facilityType": "6L",
+                  "facilityDescription": "Reese Center",
+                  "facilityDescriptionShort": "Reese Ctr",
+                  "facilityGroup": false,
+                  "facilityCapacity": 20,
+                  "buildingCode": "585",
+                  "room": "141",
+                  "buildingDescription": "Reese Ctr 141",
+                  "buildingDescriptionShort": "RS 141",
+                  "startTime": "11:10 am",
+                  "endTime": "12:30 pm",
+                  "startDate": "2026-08-25",
+                  "endDate": "2026-12-09",
+                  "monday": true,
+                  "tuesday": false,
+                  "wednesday": true,
+                  "thursday": false,
+                  "friday": false,
+                  "saturday": false,
+                  "sunday": false,
+                  "standingMeetingPattern": null,
+                  "instructors": [
+                    {
+                      "displayName": "Travis Neel",
+                      "role": "PI",
+                      "email": "neel.30@osu.edu"
+                    }
+                  ]
+                }
+              ],
+              "courseOfferingNumber": 5,
+              "courseId": "150416",
+              "academicGroup": "ASC",
+              "subject": "English",
+              "catalogNumber": "1110.01",
+              "career": "UGRD",
+              "description": "First-Yr Engl Comp",
+              "enrollmentStatus": "Closed",
+              "status": "A",
+              "type": "E",
+              "associatedClass": "20",
+              "autoEnrollWaitlist": true,
+              "autoEnrollSection1": null,
+              "autoEnrollSection2": null,
+              "consent": false,
+              "waitlistCapacity": 999,
+              "minimumEnrollment": 0,
+              "enrollmentTotal": 19,
+              "waitlistTotal": 0,
+              "academicOrg": "D0971",
+              "location": "CS-NEWARK",
+              "equivalentCourseId": null,
+              "startDate": "2026-08-25",
+              "endDate": "2026-12-09",
+              "cancelDate": null,
+              "primaryInstructorSection": "0020",
+              "combinedSection": null,
+              "holidaySchedule": "OSUSIS",
+              "sessionCode": "1",
+              "sessionDescription": "Regular Academic Term",
+              "term": "Autumn 2026",
+              "campus": "Newark",
+              "attributes": [
+                {
+                  "name": "CCP",
+                  "value": "LEVEL 1",
+                  "description": "Level 1 CCP course"
+                },
+                {
+                  "name": "EXAM",
+                  "value": "AP",
+                  "description": "Advanced Placement Program"
+                },
+                {
+                  "name": "GE",
+                  "value": "WR1",
+                  "description": "GEL Writing and Communication: level 1"
+                },
+                {
+                  "name": "GE2",
+                  "value": "F1",
+                  "description": "GEN Foundation: Writing and Information Literacy"
+                },
+                {
+                  "name": "OTM",
+                  "value": "TME 001",
+                  "description": "Ohio Transfer 36 - First Writing Course"
+                }
+              ],
+              "secCampus": "NWK",
+              "secAcademicGroup": "ASC",
+              "secCatalogNumber": "1110.01",
+              "meetingDays": "",
+              "_parent": "150416-5-1268",
+              "subjectDesc": "English",
+              "courseTitle": "First-Year English Composition",
+              "courseDescription": "Practice in the fundamentals of expository writing, as illustrated in the student's own writing & in the essays of professional writers. May be available as a service learning course with five hours community service required at the Lima campus only.\nPrereq: EduTL1902 (108.01) or 1902.04 (108.01), or English Placement Level 4. Not open to students with credit for 1109 (109.01 or 109.02), 1110.01 (non-DL version), 1110.01H (110.01H), 1110.02 (110.02), 1110.02H (110.02H), 1110.03 (110.03), 1167H (167H ), 110.01.",
+              "catalogLevel": "1xxx",
+              "termCode": "1268"
+            },
+            {
+              "classNumber": "23660",
+              "section": "0080",
+              "component": "Lecture",
+              "instructionMode": "In Person",
+              "meetings": [
+                {
+                  "meetingNumber": 1,
+                  "facilityId": "RS0153",
+                  "facilityType": "6L",
+                  "facilityDescription": "Reese Center",
+                  "facilityDescriptionShort": "Reese Ctr",
+                  "facilityGroup": false,
+                  "facilityCapacity": 20,
+                  "buildingCode": "585",
+                  "room": "153",
+                  "buildingDescription": "Reese Ctr 153",
+                  "buildingDescriptionShort": "RS 153",
+                  "startTime": "2:20 pm",
+                  "endTime": "3:40 pm",
+                  "startDate": "2026-08-25",
+                  "endDate": "2026-12-09",
+                  "monday": false,
+                  "tuesday": true,
+                  "wednesday": false,
+                  "thursday": true,
+                  "friday": false,
+                  "saturday": false,
+                  "sunday": false,
+                  "standingMeetingPattern": null,
+                  "instructors": [
+                    {
+                      "displayName": "Laura Younger",
+                      "role": "PI",
+                      "email": "younger.18@osu.edu"
+                    }
+                  ]
+                }
+              ],
+              "courseOfferingNumber": 5,
+              "courseId": "150416",
+              "academicGroup": "ASC",
+              "subject": "English",
+              "catalogNumber": "1110.01",
+              "career": "UGRD",
+              "description": "First-Yr Engl Comp",
+              "enrollmentStatus": "Closed",
+              "status": "A",
+              "type": "E",
+              "associatedClass": "20",
+              "autoEnrollWaitlist": true,
+              "autoEnrollSection1": null,
+              "autoEnrollSection2": null,
+              "consent": false,
+              "waitlistCapacity": 999,
+              "minimumEnrollment": 0,
+              "enrollmentTotal": 19,
+              "waitlistTotal": 0,
+              "academicOrg": "D0971",
+              "location": "CS-NEWARK",
+              "equivalentCourseId": null,
+              "startDate": "2026-08-25",
+              "endDate": "2026-12-09",
+              "cancelDate": null,
+              "primaryInstructorSection": "0020",
+              "combinedSection": null,
+              "holidaySchedule": "OSUSIS",
+              "sessionCode": "1",
+              "sessionDescription": "Regular Academic Term",
+              "term": "Autumn 2026",
+              "campus": "Newark",
+              "attributes": [
+                {
+                  "name": "CCP",
+                  "value": "LEVEL 1",
+                  "description": "Level 1 CCP course"
+                },
+                {
+                  "name": "EXAM",
+                  "value": "AP",
+                  "description": "Advanced Placement Program"
+                },
+                {
+                  "name": "GE",
+                  "value": "WR1",
+                  "description": "GEL Writing and Communication: level 1"
+                },
+                {
+                  "name": "GE2",
+                  "value": "F1",
+                  "description": "GEN Foundation: Writing and Information Literacy"
+                },
+                {
+                  "name": "OTM",
+                  "value": "TME 001",
+                  "description": "Ohio Transfer 36 - First Writing Course"
+                }
+              ],
+              "secCampus": "NWK",
+              "secAcademicGroup": "ASC",
+              "secCatalogNumber": "1110.01",
+              "meetingDays": "",
+              "_parent": "150416-5-1268",
+              "subjectDesc": "English",
+              "courseTitle": "First-Year English Composition",
+              "courseDescription": "Practice in the fundamentals of expository writing, as illustrated in the student's own writing & in the essays of professional writers. May be available as a service learning course with five hours community service required at the Lima campus only.\nPrereq: EduTL1902 (108.01) or 1902.04 (108.01), or English Placement Level 4. Not open to students with credit for 1109 (109.01 or 109.02), 1110.01 (non-DL version), 1110.01H (110.01H), 1110.02 (110.02), 1110.02H (110.02H), 1110.03 (110.03), 1167H (167H ), 110.01.",
+              "catalogLevel": "1xxx",
+              "termCode": "1268"
+            },
+            {
+              "classNumber": "24475",
+              "section": "0120",
+              "component": "Lecture",
+              "instructionMode": "In Person",
+              "meetings": [
+                {
+                  "meetingNumber": 1,
+                  "facilityId": "RS0141",
+                  "facilityType": "6L",
+                  "facilityDescription": "Reese Center",
+                  "facilityDescriptionShort": "Reese Ctr",
+                  "facilityGroup": false,
+                  "facilityCapacity": 20,
+                  "buildingCode": "585",
+                  "room": "141",
+                  "buildingDescription": "Reese Ctr 141",
+                  "buildingDescriptionShort": "RS 141",
+                  "startTime": "12:45 pm",
+                  "endTime": "2:05 pm",
+                  "startDate": "2026-08-25",
+                  "endDate": "2026-12-09",
+                  "monday": false,
+                  "tuesday": true,
+                  "wednesday": false,
+                  "thursday": true,
+                  "friday": false,
+                  "saturday": false,
+                  "sunday": false,
+                  "standingMeetingPattern": null,
+                  "instructors": [
+                    {
+                      "displayName": "Travis Neel",
+                      "role": "PI",
+                      "email": "neel.30@osu.edu"
+                    }
+                  ]
+                }
+              ],
+              "courseOfferingNumber": 5,
+              "courseId": "150416",
+              "academicGroup": "ASC",
+              "subject": "English",
+              "catalogNumber": "1110.01",
+              "career": "UGRD",
+              "description": "First-Yr Engl Comp",
+              "enrollmentStatus": "Closed",
+              "status": "A",
+              "type": "E",
+              "associatedClass": "20",
+              "autoEnrollWaitlist": true,
+              "autoEnrollSection1": null,
+              "autoEnrollSection2": null,
+              "consent": false,
+              "waitlistCapacity": 999,
+              "minimumEnrollment": 0,
+              "enrollmentTotal": 19,
+              "waitlistTotal": 0,
+              "academicOrg": "D0971",
+              "location": "CS-NEWARK",
+              "equivalentCourseId": null,
+              "startDate": "2026-08-25",
+              "endDate": "2026-12-09",
+              "cancelDate": null,
+              "primaryInstructorSection": "0020",
+              "combinedSection": null,
+              "holidaySchedule": "OSUSIS",
+              "sessionCode": "1",
+              "sessionDescription": "Regular Academic Term",
+              "term": "Autumn 2026",
+              "campus": "Newark",
+              "attributes": [
+                {
+                  "name": "CCP",
+                  "value": "LEVEL 1",
+                  "description": "Level 1 CCP course"
+                },
+                {
+                  "name": "EXAM",
+                  "value": "AP",
+                  "description": "Advanced Placement Program"
+                },
+                {
+                  "name": "GE",
+                  "value": "WR1",
+                  "description": "GEL Writing and Communication: level 1"
+                },
+                {
+                  "name": "GE2",
+                  "value": "F1",
+                  "description": "GEN Foundation: Writing and Information Literacy"
+                },
+                {
+                  "name": "OTM",
+                  "value": "TME 001",
+                  "description": "Ohio Transfer 36 - First Writing Course"
+                }
+              ],
+              "secCampus": "NWK",
+              "secAcademicGroup": "ASC",
+              "secCatalogNumber": "1110.01",
+              "meetingDays": "",
+              "_parent": "150416-5-1268",
+              "subjectDesc": "English",
+              "courseTitle": "First-Year English Composition",
+              "courseDescription": "Practice in the fundamentals of expository writing, as illustrated in the student's own writing & in the essays of professional writers. May be available as a service learning course with five hours community service required at the Lima campus only.\nPrereq: EduTL1902 (108.01) or 1902.04 (108.01), or English Placement Level 4. Not open to students with credit for 1109 (109.01 or 109.02), 1110.01 (non-DL version), 1110.01H (110.01H), 1110.02 (110.02), 1110.02H (110.02H), 1110.03 (110.03), 1167H (167H ), 110.01.",
+              "catalogLevel": "1xxx",
+              "termCode": "1268"
+            },
+            {
+              "classNumber": "27076",
+              "section": "0150",
+              "component": "Lecture",
+              "instructionMode": "Distance Learning",
+              "meetings": [
+                {
+                  "meetingNumber": 1,
+                  "facilityId": "ONLINE",
+                  "facilityType": "6F",
+                  "facilityDescription": "ONLINE",
+                  "facilityDescriptionShort": "ONLINE",
+                  "facilityGroup": false,
+                  "facilityCapacity": 998,
+                  "buildingCode": "ONLINE",
+                  "room": null,
+                  "buildingDescription": "Online",
+                  "buildingDescriptionShort": "ONLINE",
+                  "startTime": null,
+                  "endTime": null,
+                  "startDate": "2026-08-25",
+                  "endDate": "2026-12-09",
+                  "monday": false,
+                  "tuesday": false,
+                  "wednesday": false,
+                  "thursday": false,
+                  "friday": false,
+                  "saturday": false,
+                  "sunday": false,
+                  "standingMeetingPattern": null,
+                  "instructors": [
+                    {
+                      "displayName": "Shawna J Green",
+                      "role": "PI",
+                      "email": "green.518@osu.edu"
+                    }
+                  ]
+                }
+              ],
+              "courseOfferingNumber": 5,
+              "courseId": "150416",
+              "academicGroup": "ASC",
+              "subject": "English",
+              "catalogNumber": "1110.01",
+              "career": "UGRD",
+              "description": "First-Yr Engl Comp",
+              "enrollmentStatus": "Closed",
+              "status": "A",
+              "type": "E",
+              "associatedClass": "20",
+              "autoEnrollWaitlist": true,
+              "autoEnrollSection1": null,
+              "autoEnrollSection2": null,
+              "consent": false,
+              "waitlistCapacity": 999,
+              "minimumEnrollment": 0,
+              "enrollmentTotal": 19,
+              "waitlistTotal": 0,
+              "academicOrg": "D0971",
+              "location": "CS-NEWARK",
+              "equivalentCourseId": null,
+              "startDate": "2026-08-25",
+              "endDate": "2026-12-09",
+              "cancelDate": null,
+              "primaryInstructorSection": "0020",
+              "combinedSection": null,
+              "holidaySchedule": "OSUSIS",
+              "sessionCode": "1",
+              "sessionDescription": "Regular Academic Term",
+              "term": "Autumn 2026",
+              "campus": "Newark",
+              "attributes": [
+                {
+                  "name": "CCP",
+                  "value": "LEVEL 1",
+                  "description": "Level 1 CCP course"
+                },
+                {
+                  "name": "EXAM",
+                  "value": "AP",
+                  "description": "Advanced Placement Program"
+                },
+                {
+                  "name": "GE",
+                  "value": "WR1",
+                  "description": "GEL Writing and Communication: level 1"
+                },
+                {
+                  "name": "GE2",
+                  "value": "F1",
+                  "description": "GEN Foundation: Writing and Information Literacy"
+                },
+                {
+                  "name": "OTM",
+                  "value": "TME 001",
+                  "description": "Ohio Transfer 36 - First Writing Course"
+                }
+              ],
+              "secCampus": "NWK",
+              "secAcademicGroup": "ASC",
+              "secCatalogNumber": "1110.01",
+              "meetingDays": "",
+              "_parent": "150416-5-1268",
+              "subjectDesc": "English",
+              "courseTitle": "First-Year English Composition",
+              "courseDescription": "Practice in the fundamentals of expository writing, as illustrated in the student's own writing & in the essays of professional writers. May be available as a service learning course with five hours community service required at the Lima campus only.\nPrereq: EduTL1902 (108.01) or 1902.04 (108.01), or English Placement Level 4. Not open to students with credit for 1109 (109.01 or 109.02), 1110.01 (non-DL version), 1110.01H (110.01H), 1110.02 (110.02), 1110.02H (110.02H), 1110.03 (110.03), 1167H (167H ), 110.01.",
+              "catalogLevel": "1xxx",
+              "termCode": "1268"
+            },
+            {
+              "classNumber": "27078",
+              "section": "0180",
+              "component": "Lecture",
+              "instructionMode": "In Person",
+              "meetings": [
+                {
+                  "meetingNumber": 1,
+                  "facilityId": "NC0110",
+                  "facilityType": "1B",
+                  "facilityDescription": "North Classroom Building",
+                  "facilityDescriptionShort": "NClsrmBldg",
+                  "facilityGroup": false,
+                  "facilityCapacity": 30,
+                  "buildingCode": "659",
+                  "room": "110",
+                  "buildingDescription": "North Classroom Bldg 110",
+                  "buildingDescriptionShort": "NC 110",
+                  "startTime": "9:35 am",
+                  "endTime": "10:55 am",
+                  "startDate": "2026-08-25",
+                  "endDate": "2026-12-09",
+                  "monday": true,
+                  "tuesday": false,
+                  "wednesday": true,
+                  "thursday": false,
+                  "friday": false,
+                  "saturday": false,
+                  "sunday": false,
+                  "standingMeetingPattern": null,
+                  "instructors": [
+                    {
+                      "displayName": "James Worthie Siders",
+                      "role": "PI",
+                      "email": "siders.35@osu.edu"
+                    }
+                  ]
+                }
+              ],
+              "courseOfferingNumber": 5,
+              "courseId": "150416",
+              "academicGroup": "ASC",
+              "subject": "English",
+              "catalogNumber": "1110.01",
+              "career": "UGRD",
+              "description": "First-Yr Engl Comp",
+              "enrollmentStatus": "Closed",
+              "status": "A",
+              "type": "E",
+              "associatedClass": "20",
+              "autoEnrollWaitlist": true,
+              "autoEnrollSection1": null,
+              "autoEnrollSection2": null,
+              "consent": false,
+              "waitlistCapacity": 999,
+              "minimumEnrollment": 0,
+              "enrollmentTotal": 19,
+              "waitlistTotal": 0,
+              "academicOrg": "D0971",
+              "location": "CS-NEWARK",
+              "equivalentCourseId": null,
+              "startDate": "2026-08-25",
+              "endDate": "2026-12-09",
+              "cancelDate": null,
+              "primaryInstructorSection": "0020",
+              "combinedSection": null,
+              "holidaySchedule": "OSUSIS",
+              "sessionCode": "1",
+              "sessionDescription": "Regular Academic Term",
+              "term": "Autumn 2026",
+              "campus": "Newark",
+              "attributes": [
+                {
+                  "name": "CCP",
+                  "value": "LEVEL 1",
+                  "description": "Level 1 CCP course"
+                },
+                {
+                  "name": "EXAM",
+                  "value": "AP",
+                  "description": "Advanced Placement Program"
+                },
+                {
+                  "name": "GE",
+                  "value": "WR1",
+                  "description": "GEL Writing and Communication: level 1"
+                },
+                {
+                  "name": "GE2",
+                  "value": "F1",
+                  "description": "GEN Foundation: Writing and Information Literacy"
+                },
+                {
+                  "name": "OTM",
+                  "value": "TME 001",
+                  "description": "Ohio Transfer 36 - First Writing Course"
+                }
+              ],
+              "secCampus": "NWK",
+              "secAcademicGroup": "ASC",
+              "secCatalogNumber": "1110.01",
+              "meetingDays": "",
+              "_parent": "150416-5-1268",
+              "subjectDesc": "English",
+              "courseTitle": "First-Year English Composition",
+              "courseDescription": "Practice in the fundamentals of expository writing, as illustrated in the student's own writing & in the essays of professional writers. May be available as a service learning course with five hours community service required at the Lima campus only.\nPrereq: EduTL1902 (108.01) or 1902.04 (108.01), or English Placement Level 4. Not open to students with credit for 1109 (109.01 or 109.02), 1110.01 (non-DL version), 1110.01H (110.01H), 1110.02 (110.02), 1110.02H (110.02H), 1110.03 (110.03), 1167H (167H ), 110.01.",
+              "catalogLevel": "1xxx",
+              "termCode": "1268"
+            },
+            {
+              "classNumber": "28782",
+              "section": "0190",
+              "component": "Lecture",
+              "instructionMode": "In Person",
+              "meetings": [
+                {
+                  "meetingNumber": 1,
+                  "facilityId": "RS0153",
+                  "facilityType": "6L",
+                  "facilityDescription": "Reese Center",
+                  "facilityDescriptionShort": "Reese Ctr",
+                  "facilityGroup": false,
+                  "facilityCapacity": 20,
+                  "buildingCode": "585",
+                  "room": "153",
+                  "buildingDescription": "Reese Ctr 153",
+                  "buildingDescriptionShort": "RS 153",
+                  "startTime": "2:20 pm",
+                  "endTime": "3:40 pm",
+                  "startDate": "2026-08-25",
+                  "endDate": "2026-12-09",
+                  "monday": true,
+                  "tuesday": false,
+                  "wednesday": true,
+                  "thursday": false,
+                  "friday": false,
+                  "saturday": false,
+                  "sunday": false,
+                  "standingMeetingPattern": null,
+                  "instructors": [
+                    {
+                      "displayName": "James Worthie Siders",
+                      "role": "PI",
+                      "email": "siders.35@osu.edu"
+                    }
+                  ]
+                }
+              ],
+              "courseOfferingNumber": 5,
+              "courseId": "150416",
+              "academicGroup": "ASC",
+              "subject": "English",
+              "catalogNumber": "1110.01",
+              "career": "UGRD",
+              "description": "First-Yr Engl Comp",
+              "enrollmentStatus": "Closed",
+              "status": "A",
+              "type": "E",
+              "associatedClass": "20",
+              "autoEnrollWaitlist": true,
+              "autoEnrollSection1": null,
+              "autoEnrollSection2": null,
+              "consent": false,
+              "waitlistCapacity": 999,
+              "minimumEnrollment": 0,
+              "enrollmentTotal": 19,
+              "waitlistTotal": 0,
+              "academicOrg": "D0971",
+              "location": "CS-NEWARK",
+              "equivalentCourseId": null,
+              "startDate": "2026-08-25",
+              "endDate": "2026-12-09",
+              "cancelDate": null,
+              "primaryInstructorSection": "0020",
+              "combinedSection": null,
+              "holidaySchedule": "OSUSIS",
+              "sessionCode": "1",
+              "sessionDescription": "Regular Academic Term",
+              "term": "Autumn 2026",
+              "campus": "Newark",
+              "attributes": [
+                {
+                  "name": "CCP",
+                  "value": "LEVEL 1",
+                  "description": "Level 1 CCP course"
+                },
+                {
+                  "name": "EXAM",
+                  "value": "AP",
+                  "description": "Advanced Placement Program"
+                },
+                {
+                  "name": "GE",
+                  "value": "WR1",
+                  "description": "GEL Writing and Communication: level 1"
+                },
+                {
+                  "name": "GE2",
+                  "value": "F1",
+                  "description": "GEN Foundation: Writing and Information Literacy"
+                },
+                {
+                  "name": "OTM",
+                  "value": "TME 001",
+                  "description": "Ohio Transfer 36 - First Writing Course"
+                }
+              ],
+              "secCampus": "NWK",
+              "secAcademicGroup": "ASC",
+              "secCatalogNumber": "1110.01",
+              "meetingDays": "",
+              "_parent": "150416-5-1268",
+              "subjectDesc": "English",
+              "courseTitle": "First-Year English Composition",
+              "courseDescription": "Practice in the fundamentals of expository writing, as illustrated in the student's own writing & in the essays of professional writers. May be available as a service learning course with five hours community service required at the Lima campus only.\nPrereq: EduTL1902 (108.01) or 1902.04 (108.01), or English Placement Level 4. Not open to students with credit for 1109 (109.01 or 109.02), 1110.01 (non-DL version), 1110.01H (110.01H), 1110.02 (110.02), 1110.02H (110.02H), 1110.03 (110.03), 1167H (167H ), 110.01.",
+              "catalogLevel": "1xxx",
+              "termCode": "1268"
+            },
+            {
+              "classNumber": "38582",
+              "section": "0210",
+              "component": "Lecture",
+              "instructionMode": "In Person",
+              "meetings": [
+                {
+                  "meetingNumber": 1,
+                  "facilityId": "RS0141",
+                  "facilityType": "6L",
+                  "facilityDescription": "Reese Center",
+                  "facilityDescriptionShort": "Reese Ctr",
+                  "facilityGroup": false,
+                  "facilityCapacity": 20,
+                  "buildingCode": "585",
+                  "room": "141",
+                  "buildingDescription": "Reese Ctr 141",
+                  "buildingDescriptionShort": "RS 141",
+                  "startTime": "9:35 am",
+                  "endTime": "10:55 am",
+                  "startDate": "2026-08-25",
+                  "endDate": "2026-12-09",
+                  "monday": false,
+                  "tuesday": true,
+                  "wednesday": false,
+                  "thursday": true,
+                  "friday": false,
+                  "saturday": false,
+                  "sunday": false,
+                  "standingMeetingPattern": null,
+                  "instructors": [
+                    {
+                      "displayName": "Michael A Trovato",
+                      "role": "PI",
+                      "email": "trovato.2@osu.edu"
+                    }
+                  ]
+                }
+              ],
+              "courseOfferingNumber": 5,
+              "courseId": "150416",
+              "academicGroup": "ASC",
+              "subject": "English",
+              "catalogNumber": "1110.01",
+              "career": "UGRD",
+              "description": "First-Yr Engl Comp",
+              "enrollmentStatus": "Closed",
+              "status": "A",
+              "type": "E",
+              "associatedClass": "20",
+              "autoEnrollWaitlist": true,
+              "autoEnrollSection1": null,
+              "autoEnrollSection2": null,
+              "consent": false,
+              "waitlistCapacity": 999,
+              "minimumEnrollment": 0,
+              "enrollmentTotal": 19,
+              "waitlistTotal": 0,
+              "academicOrg": "D0971",
+              "location": "CS-NEWARK",
+              "equivalentCourseId": null,
+              "startDate": "2026-08-25",
+              "endDate": "2026-12-09",
+              "cancelDate": null,
+              "primaryInstructorSection": "0020",
+              "combinedSection": null,
+              "holidaySchedule": "OSUSIS",
+              "sessionCode": "1",
+              "sessionDescription": "Regular Academic Term",
+              "term": "Autumn 2026",
+              "campus": "Newark",
+              "attributes": [
+                {
+                  "name": "CCP",
+                  "value": "LEVEL 1",
+                  "description": "Level 1 CCP course"
+                },
+                {
+                  "name": "EXAM",
+                  "value": "AP",
+                  "description": "Advanced Placement Program"
+                },
+                {
+                  "name": "GE",
+                  "value": "WR1",
+                  "description": "GEL Writing and Communication: level 1"
+                },
+                {
+                  "name": "GE2",
+                  "value": "F1",
+                  "description": "GEN Foundation: Writing and Information Literacy"
+                },
+                {
+                  "name": "OTM",
+                  "value": "TME 001",
+                  "description": "Ohio Transfer 36 - First Writing Course"
+                }
+              ],
+              "secCampus": "NWK",
+              "secAcademicGroup": "ASC",
+              "secCatalogNumber": "1110.01",
+              "meetingDays": "",
+              "_parent": "150416-5-1268",
+              "subjectDesc": "English",
+              "courseTitle": "First-Year English Composition",
+              "courseDescription": "Practice in the fundamentals of expository writing, as illustrated in the student's own writing & in the essays of professional writers. May be available as a service learning course with five hours community service required at the Lima campus only.\nPrereq: EduTL1902 (108.01) or 1902.04 (108.01), or English Placement Level 4. Not open to students with credit for 1109 (109.01 or 109.02), 1110.01 (non-DL version), 1110.01H (110.01H), 1110.02 (110.02), 1110.02H (110.02H), 1110.03 (110.03), 1167H (167H ), 110.01.",
+              "catalogLevel": "1xxx",
+              "termCode": "1268"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

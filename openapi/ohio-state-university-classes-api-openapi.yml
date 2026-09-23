@@ -1,0 +1,267 @@
+openapi: 3.2.0
+info:
+  title: Ohio State Mobile Content API v2 Classes API
+  version: '2.0'
+  summary: Public read-only JSON API operated by Ohio State University for class search and campus events.
+  description: The Ohio State Mobile Content API is a public, unauthenticated, read-only JSON API operated by The Ohio State University on its own infrastructure (content.osu.edu resolves to WH-prdosuedu132-VIP.it.ohio-state.edu, 140.254.112.132, inside Ohio State's own netblock).
+  contact:
+    name: Ohio State University Office of Technology and Digital Innovation
+    url: https://it.osu.edu/
+  x-operator: institution
+  x-operator-basis: content.osu.edu is a hostname on Ohio State's own registrable domain resolving via CNAME to WH-prdosuedu132-VIP.it.ohio-state.edu (140.254.112.132), Ohio State's own address space. No vendor identity appears in the service root, the response envelopes or the DNS chain.
+  x-provenance:
+    generated: '2026-09-01'
+    method: derived
+    source:
+    - https://content.osu.edu/v2
+    - https://content.osu.edu/v2/classes/searchableTermsV2
+    - https://content.osu.edu/v2/classes/search
+    - https://content.osu.edu/v2/events
+    - https://classes.osu.edu/osu-mobile.js
+servers:
+- url: https://content.osu.edu/v2
+  description: Production. Verified live 2026-09-01, returns {"ok":true,"server":"OSU Mobile API v2"}.
+tags:
+- name: Classes
+  description: Course and section search against the Student Information System term data.
+paths:
+  /:
+    get:
+      tags:
+      - Classes
+      operationId: getServiceRoot
+      summary: Service root
+      description: Returns a liveness envelope naming the service. Verified 200 on 2026-09-01.
+      responses:
+        '200':
+          description: Service is up.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                  server:
+                    type: string
+                    examples:
+                    - OSU Mobile API v2
+  /classes/searchableTermsV2:
+    get:
+      tags:
+      - Classes
+      operationId: listSearchableTerms
+      summary: List academic terms open to class search
+      description: Returns the academic terms for which class search is enabled, each with its SIS term code (strm), short and long descriptions, and the window during which it is searchable.
+      responses:
+        '200':
+          description: Term list.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      _id:
+                        type: string
+                      _rev:
+                        type: string
+                      updated:
+                        type: string
+                        format: date-time
+                      data:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/Term'
+  /classes/search:
+    get:
+      tags:
+      - Classes
+      operationId: searchClasses
+      summary: Search classes offered in a term
+      description: Full-text search across course catalog and section data for one term. Returns a paged envelope with sort options, refinable filters and an array of course records. Verified live 2026-09-01 (q=english, term=1268 returned totalItems 1033).
+      parameters:
+      - name: q
+        in: query
+        required: true
+        description: Free-text query across subject, catalog number, title and description.
+        schema:
+          type: string
+      - name: term
+        in: query
+        required: true
+        description: SIS term code as returned by /classes/searchableTermsV2 (for example 1268).
+        schema:
+          type: string
+      - name: p
+        in: query
+        required: false
+        description: 1-indexed page number.
+        schema:
+          type: integer
+          minimum: 1
+          default: 1
+      - name: sort
+        in: query
+        required: false
+        description: Sort key from the response `sort` array; a leading hyphen reverses direction.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Paged search result.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    $ref: '#/components/schemas/ClassSearchResult'
+  /classes/availability:
+    get:
+      tags:
+      - Classes
+      operationId: getClassAvailability
+      summary: Seat availability for classes
+      description: Referenced by the classes.osu.edu client bundle. Probed 2026-09-01 with no parameters and returned 503 {"status":"error","error":{"code":503,"message":"Service Unavailable"}} — recorded because it is a real declared path, NOT because a working call was observed. Its parameters are unknown.
+      responses:
+        '503':
+          description: Observed response to a bare call on 2026-09-01.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas:
+    ClassSearchResult:
+      type: object
+      properties:
+        totalItems:
+          type: integer
+        currentItemCount:
+          type: integer
+        page:
+          type: integer
+        totalPages:
+          type: integer
+        refineQueryTemplate:
+          type: string
+        nextPageLink:
+          type:
+          - string
+          - 'null'
+        prevPageLink:
+          type:
+          - string
+          - 'null'
+        activeSort:
+          type: string
+        sort:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+              title:
+                type: string
+              type:
+                type: string
+              direction:
+                type: string
+              link:
+                type: string
+        filters:
+          type: array
+          items:
+            type: object
+        activeFilters:
+          type: array
+          items:
+            type: object
+        courses:
+          type: array
+          items:
+            type: object
+            properties:
+              course:
+                $ref: '#/components/schemas/Course'
+    Error:
+      type: object
+      properties:
+        status:
+          type: string
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+    Term:
+      type: object
+      description: An academic term exposed to class search.
+      properties:
+        strm:
+          type: string
+          description: SIS term code.
+          examples:
+          - '1268'
+        descr:
+          type: string
+          examples:
+          - Autumn 2026
+        descrlong:
+          type: string
+          examples:
+          - 2026 Autmn
+        classSearch:
+          type: string
+          description: Y when class search is enabled for the term.
+        startDate:
+          type: string
+          format: date
+        endDate:
+          type: string
+          format: date
+    Course:
+      type: object
+      description: Catalog record for a course as offered in a term.
+      properties:
+        term:
+          type: string
+        effectiveDate:
+          type: string
+          format: date
+        effectiveStatus:
+          type: string
+        title:
+          type: string
+        shortDescription:
+          type: string
+        description:
+          type: string
+        equivalentId:
+          type: string
+        allowMultiEnroll:
+          type: string
+        maxUnits:
+          type: number
+        minUnits:
+          type: number
+        repeatUnitsLimit:
+          type: number
+        grading:
+          type: string
+        component:
+          type: string
+        primaryComponent:
+          type: string
+        offeringNumber:
+          type: string
+        academicGroup:
+          type: string
+        subject:
+          type: string

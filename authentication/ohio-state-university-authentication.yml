@@ -1,0 +1,63 @@
+---
+aid: ohio-state-university
+name: Ohio State University authentication
+description: >-
+  How each Ohio State surface in this profile is authenticated. Two very different postures sit
+  side by side: a small number of genuinely open, unauthenticated read APIs, and an
+  institution-wide SAML/Shibboleth Single Sign-On that gates everything else. There is no API key
+  programme, no developer registration, and no published OAuth client onboarding for any Ohio
+  State surface found in this run.
+generated: '2026-09-01'
+method: probed
+source:
+  - https://content.osu.edu/v2
+  - https://data.chrr.ohio-state.edu/api/3/action/status_show
+  - https://kb.osu.edu/server/api
+  - https://mdq.incommon.org/entities/urn%3Amace%3Aincommon%3Aosu.edu
+surfaces:
+  - surface: Ohio State Mobile Content API v2
+    baseURL: https://content.osu.edu/v2
+    x-operator: institution
+    scheme: none
+    detail: >-
+      No authentication of any kind. Anonymous GET returns data; no key, token, referer check or
+      rate-limit header was observed on 2026-09-01.
+    evidence:
+      - url: https://content.osu.edu/v2/classes/searchableTermsV2
+        status: 200
+  - surface: CHRR CKAN open data portal
+    baseURL: https://data.chrr.ohio-state.edu/api/3
+    x-operator: institution
+    scheme: none-for-read
+    detail: >-
+      CKAN 2.10.10 Action API. Read actions (status_show, package_list, package_show) are anonymous.
+      Write actions require a CKAN API token, and the deployment loads the saml2auth extension, so
+      account login is federated through Ohio State's own Shibboleth IdP rather than local CKAN
+      accounts.
+    evidence:
+      - url: https://data.chrr.ohio-state.edu/api/3/action/status_show
+        status: 200
+        note: 'extensions include saml2auth, chrrpermissions, doi, datastore, xloader.'
+  - surface: Knowledge Bank DSpace REST API
+    baseURL: https://kb.osu.edu/server/api
+    x-operator: tenant
+    scheme: none-for-read
+    detail: >-
+      DSpace 7.6 REST API. Public read of communities, collections, items and bitstreams is
+      anonymous. Authenticated operations use DSpace's own token flow, which is Atmire/DSpace
+      software, not an Ohio State authentication scheme.
+    evidence:
+      - url: https://kb.osu.edu/server/api
+        status: 200
+  - surface: Web Single Sign-On (Shibboleth IdP)
+    baseURL: https://webauth.service.ohio-state.edu/idp
+    x-operator: institution
+    scheme: saml2
+    detail: >-
+      SAML 2.0 via Shibboleth, published in InCommon under entityID urn:mace:incommon:osu.edu.
+      Redirect and POST SSO/SLO bindings plus SOAP ECP. Intended for registered campus and
+      cloud service owners integrating as SAML service providers, not for open public consumption
+      — there is no self-service SP registration surface.
+    evidence:
+      - url: https://mdq.incommon.org/entities/urn%3Amace%3Aincommon%3Aosu.edu
+        status: 200

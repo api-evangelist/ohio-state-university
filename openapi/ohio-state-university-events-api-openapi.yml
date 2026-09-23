@@ -1,0 +1,84 @@
+openapi: 3.2.0
+info:
+  title: Ohio State Mobile Content API v2 Events API
+  version: '2.0'
+  summary: Public read-only JSON API operated by Ohio State University for class search and campus events.
+  description: The Ohio State Mobile Content API is a public, unauthenticated, read-only JSON API operated by The Ohio State University on its own infrastructure (content.osu.edu resolves to WH-prdosuedu132-VIP.it.ohio-state.edu, 140.254.112.132, inside Ohio State's own netblock).
+  contact:
+    name: Ohio State University Office of Technology and Digital Innovation
+    url: https://it.osu.edu/
+  x-operator: institution
+  x-operator-basis: content.osu.edu is a hostname on Ohio State's own registrable domain resolving via CNAME to WH-prdosuedu132-VIP.it.ohio-state.edu (140.254.112.132), Ohio State's own address space. No vendor identity appears in the service root, the response envelopes or the DNS chain.
+  x-provenance:
+    generated: '2026-09-01'
+    method: derived
+    source:
+    - https://content.osu.edu/v2
+    - https://content.osu.edu/v2/classes/searchableTermsV2
+    - https://content.osu.edu/v2/classes/search
+    - https://content.osu.edu/v2/events
+    - https://classes.osu.edu/osu-mobile.js
+servers:
+- url: https://content.osu.edu/v2
+  description: Production. Verified live 2026-09-01, returns {"ok":true,"server":"OSU Mobile API v2"}.
+tags:
+- name: Events
+  description: Public campus events feed.
+paths:
+  /events:
+    get:
+      tags:
+      - Events
+      operationId: listEvents
+      summary: List public campus events
+      description: Returns the current public campus events feed. Verified live 2026-09-01 with 153 events across Ohio State campuses.
+      responses:
+        '200':
+          description: Events feed.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    examples:
+                    - success
+                  lastModified:
+                    type: string
+                    format: date-time
+                  data:
+                    type: object
+                    properties:
+                      events:
+                        type: array
+                        items:
+                          $ref: '#/components/schemas/Event'
+components:
+  schemas:
+    Event:
+      type: object
+      description: A public campus event.
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+        content:
+          type: string
+          description: Markdown body.
+        label:
+          type: string
+          description: Sponsoring unit.
+        campus:
+          type: string
+        color:
+          type: string
+        endDate:
+          type: string
+          format: date-time
+        link:
+          type: string
+          format: uri
+        itemHash:
+          type: string

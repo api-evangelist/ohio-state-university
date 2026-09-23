@@ -1,0 +1,41 @@
+{
+  "x-provenance": {
+    "generated": "2026-09-01",
+    "method": "probed",
+    "source": "https://data.chrr.ohio-state.edu/api/3/action/status_show",
+    "status": 200,
+    "note": "Live response captured from the operator's endpoint on the date above and trimmed for size. Not authored by API Evangelist and not authored by Ohio State as documentation."
+  },
+  "request": {
+    "method": "GET",
+    "url": "https://data.chrr.ohio-state.edu/api/3/action/status_show"
+  },
+  "response": {
+    "help": "https://data.chrr.ohio-state.edu/api/3/action/help_show?name=status_show",
+    "success": true,
+    "result": {
+      "site_title": "CHRR CKAN",
+      "site_description": "",
+      "site_url": "https://data.chrr.ohio-state.edu",
+      "error_emails_to": "",
+      "locale_default": "en",
+      "extensions": [
+        "envvars",
+        "image_view",
+        "text_view",
+        "recline_view",
+        "datatables_view",
+        "chrrpermissions",
+        "datastore",
+        "xloader",
+        "saml2auth",
+        "osubux",
+        "doi",
+        "chrr_idatasetform",
+        "pdf_view",
+        "video_view"
+      ],
+      "ckan_version": "2.10.10"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "x-provenance": {
+    "generated": "2026-09-01",
+    "method": "probed",
+    "source": "https://data.chrr.ohio-state.edu/api/3/action/package_list",
+    "status": 200,
+    "note": "Live response captured from the operator's endpoint on the date above and trimmed for size. Not authored by API Evangelist and not authored by Ohio State as documentation."
+  },
+  "request": {
+    "method": "GET",
+    "url": "https://data.chrr.ohio-state.edu/api/3/action/package_list"
+  },
+  "response": {
+    "help": "https://data.chrr.ohio-state.edu/api/3/action/help_show?name=package_list",
+    "success": true,
+    "result": [
+      "consumer-finance-monthly-documents",
+      "consumer-finance-monthly-executive-summaries",
+      "consumer-finance-monthly-survey-data",
+      "historic-voter-files-to-all-50-states",
+      "longitudinal-evidence-toward-higher-education"
+    ]
+  }
+}

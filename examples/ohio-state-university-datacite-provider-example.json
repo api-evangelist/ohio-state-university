@@ -1,0 +1,29 @@
+{
+  "x-provenance": {
+    "generated": "2026-09-01",
+    "method": "probed",
+    "source": "https://api.datacite.org/providers/gvuz",
+    "status": 200,
+    "note": "Live response captured from the operator's endpoint on the date above and trimmed for size. Not authored by API Evangelist and not authored by Ohio State as documentation."
+  },
+  "request": {
+    "method": "GET",
+    "url": "https://api.datacite.org/providers/gvuz"
+  },
+  "response": {
+    "data": {
+      "id": "gvuz",
+      "type": "providers",
+      "attributes": {
+        "name": "The Ohio State University",
+        "displayName": "The Ohio State University",
+        "symbol": "GVUZ",
+        "memberType": "direct_member",
+        "rorId": "https://ror.org/00rs6vg23",
+        "website": "https://chrr.osu.edu/",
+        "created": "2025-06-18T13:34:29.000Z",
+        "isActive": true
+      }
+    }
+  }
+}

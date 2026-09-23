@@ -1,0 +1,108 @@
+---
+aid: ohio-state-university
+name: Ohio State University domain standard conformance
+description: >-
+  Conformance of Ohio State University's programmable surfaces against the standards named in the
+  Kin Score `education` regulatory regime. Reward-only: a standard is listed as `conformant` ONLY
+  where a live probe returned evidence of the protocol itself, never where a page merely claims it.
+  Every conformant row names the exact URL probed, the HTTP status returned, and the operator of
+  the endpoint the evidence came from — because for a university the operator of the endpoint and
+  the owner of the data are routinely different parties.
+generated: '2026-09-01'
+method: probed
+source:
+  - https://kb.osu.edu/server/oai/request?verb=Identify
+  - https://mdq.incommon.org/entities/urn%3Amace%3Aincommon%3Aosu.edu
+  - https://webauth.service.ohio-state.edu/idp/profile/Metadata/SAML
+  - https://api.datacite.org/providers/gvuz
+  - https://api.crossref.org/members?query=ohio+state
+regime: education
+standards:
+  - standard: oai-pmh
+    status: conformant
+    version: '2.0'
+    x-operator: tenant
+    detail: >-
+      The Knowledge Bank exposes a live OAI-PMH 2.0 interface. Identify returns
+      repositoryName "The Knowledge Bank", protocolVersion 2.0, adminEmail libkbhelp@lists.osu.edu,
+      earliestDatestamp 2003-07-11, granularity YYYY-MM-DDThh:mm:ssZ. The endpoint is on Ohio
+      State's own hostname but kb.osu.edu CNAMEs to osu-prod.cname.atmire.com — the DSpace software
+      and its hosting are Atmire's, the repository and its metadata are Ohio State's.
+    evidence:
+      - url: https://kb.osu.edu/server/oai/request?verb=Identify
+        status: 200
+        note: XML OAI-PMH Identify response, verified 2026-09-01.
+  - standard: shibboleth
+    status: conformant
+    x-operator: institution
+    detail: >-
+      Ohio State operates its own Shibboleth Identity Provider for institution-wide Web Single
+      Sign-On at webauth.service.ohio-state.edu (CNAME webauth.lbext1.it.osu.edu, Ohio State's own
+      address space). Reached by redirect from every SSO-protected Ohio State service probed,
+      including osu.instructure.com and dst-docs.it.osu.edu.
+    evidence:
+      - url: https://webauth.service.ohio-state.edu/idp/profile/Metadata/SAML
+        status: 200
+      - url: https://webauth.service.ohio-state.edu/idp/status
+        status: 403
+        note: Present but access-restricted, which is the expected Shibboleth posture.
+      - url: https://osu.instructure.com/
+        status: 200
+        note: Redirects to https://webauth.service.ohio-state.edu/idp/profile/SAML2/Redirect/SSO.
+  - standard: saml
+    status: conformant
+    version: '2.0'
+    x-operator: institution
+    detail: >-
+      Ohio State's SAML 2.0 IdP is published in the InCommon Federation metadata aggregate under
+      entityID urn:mace:incommon:osu.edu, signed by InCommon, carrying SAML2 Redirect/POST SSO,
+      Redirect/POST SLO and SOAP ECP endpoints, the REFEDS Research and Scholarship entity
+      category, SIRTFI assurance certification, and OrganizationName "The Ohio State University".
+      The metadata is served by a federation host; the IdP it describes is Ohio State's own.
+    evidence:
+      - url: https://mdq.incommon.org/entities/urn%3Amace%3Aincommon%3Aosu.edu
+        status: 200
+        note: application/samlmetadata+xml, 9537 bytes, validUntil 2026-09-15.
+  - standard: datacite
+    status: conformant
+    x-operator: registry
+    detail: >-
+      The Ohio State University is a DataCite direct member, provider symbol GVUZ, active, linked
+      to ROR https://ror.org/00rs6vg23. It operates one registered repository, gvuz.dcavye
+      (CHRR CKAN Repository), minting DOIs under prefix 10.82271 against datasets published on
+      Ohio State's own CKAN portal at data.chrr.ohio-state.edu.
+    evidence:
+      - url: https://api.datacite.org/providers/gvuz
+        status: 200
+      - url: https://api.datacite.org/dois?client-id=gvuz.dcavye
+        status: 200
+        note: 2 DOIs, both resolving to data.chrr.ohio-state.edu datasets.
+  - standard: crossref
+    status: conformant
+    x-operator: registry
+    detail: >-
+      The Ohio State University Libraries is Crossref member 7412 with 4,927 registered DOIs.
+    evidence:
+      - url: https://api.crossref.org/members?query=ohio+state
+        status: 200
+        note: One match, member id 7412, primary-name "The Ohio State University Libraries".
+not_evidenced:
+  - standard: orcid
+    detail: >-
+      No Ohio State ORCID consortium or member record was found on a public machine-readable
+      surface during this run. Absence of evidence, not evidence of absence — do not claim it.
+  - standard: lti
+    detail: >-
+      Ohio State runs Canvas at osu.instructure.com, and Canvas is an LTI platform, but no
+      Ohio-State-published LTI registration, tool configuration or conformance certificate was
+      found. The tenancy is recorded in apis.yml; the conformance is not claimed from it.
+  - standard: scim
+    detail: No public SCIM endpoint or provisioning documentation found.
+  - standard: oneroster
+    detail: No OneRoster surface found; OneRoster is a K-12 standard and is rare in US R1 institutions.
+  - standard: ed-fi
+    detail: No Ed-Fi surface found; Ed-Fi is a K-12 standard.
+  - standard: caliper
+    detail: No Caliper analytics endpoint or claim found on a public surface.
+  - standard: qti
+    detail: No QTI surface found on a public surface.

@@ -1,0 +1,90 @@
+{
+  "x-provenance": {
+    "generated": "2026-09-01",
+    "method": "probed",
+    "source": "https://content.osu.edu/v2/events",
+    "status": 200,
+    "note": "Live response captured from the operator's endpoint on the date above and trimmed for size. Not authored by API Evangelist and not authored by Ohio State as documentation."
+  },
+  "request": {
+    "method": "GET",
+    "url": "https://content.osu.edu/v2/events"
+  },
+  "response": {
+    "status": "success",
+    "lastModified": "2026-09-01T18:47:06.051Z",
+    "data": {
+      "events": [
+        {
+          "color": "#bb0000",
+          "endDate": "2026-09-02T00:15:00.000Z",
+          "campus": "columbus",
+          "link": "https://studentlife.osu.edu/Events.aspx?y=2026&mo=9&day=1&e=83981&title=group-fitness-classes",
+          "itemHash": "c58acffc6eb98c2903cdc109358f1933",
+          "description": "RPAC/North Rec (check schedule)",
+          "label": "Student Life",
+          "title": "Group Fitness Classes",
+          "content": "**Try a group fitness class and discover how movement can make you feel happier, stronger and more connected!**\u00a0\n\nWhether you enjoy lifting weights, challenging your cardio, strengthening your core, grooving to the music or relaxing in yoga, we strive to offer accessible classes for all bodies and all levels. Group Fitness classes are FREE for all active Rec Sports members.\n\nRec Sports Group Fitness  \n[fitness@osu.edu](mailto:fitness@osu.edu)  \n614-292-7671[View schedule and register here](<https://recsports.osu.edu/fms/groupfitness >)",
+          "tags": [
+            "Sports",
+            "Health and Wellness",
+            "Social",
+            "Students (Columbus Campus)",
+            "Graduate/Professional Students",
+            "Recreational Sports",
+            "yoga",
+            "cycle",
+            "fitness",
+            "pilates",
+            "strength",
+            "group fitness",
+            "cardio dance"
+          ],
+          "location": "RPAC/North Rec (check schedule)",
+          "id": "https://studentlife.osu.edu/Events.aspx?y=2026&mo=9&day=1&e=83981&title=group-fitness-classes",
+          "startDate": "2026-09-01T10:30:00.000Z"
+        },
+        {
+          "color": "#bb0000",
+          "endDate": "2026-09-01T20:00:00.000Z",
+          "campus": "columbus",
+          "link": "https://studentlife.osu.edu/Events.aspx?y=2026&mo=9&day=1&e=84221&title=career-studios-drop-in-resume-review-at-the-ohio-union",
+          "itemHash": "99f2b4a6e5d726282108df06db5a67ea",
+          "description": "Ohio Union - Keith B. Key Center for Student Leadership and Service ",
+          "label": "Student Life",
+          "title": "Career Studios Drop-In Resume Review at The Ohio Union",
+          "content": "Career Studios are welcoming, drop-in spaces designed to give students quick, practical career support from their peers. No appointment needed. Stop by anytime to connect with trained Student Peer Career Coaches who are ready to help with everyday career questions and next steps.\n\nPeer Career Coaches can assist with:\n\n*   Building or updating a resume\n*   Searching for jobs or internships\n*   Preparing for interviews\n*   Connecting you with a professional Career Coach for individualized support\n\nEach Career Studio is supported by professional career coaching staff and designed to make career guidance accessible and approachable for all students.\n\n**Ohio Union - Keith B. Key Center for Student Leadership and Service (southwest corner on the 2nd floor)**\n\n*   Mondays - Thursdays from 10 a.m.-4 p.m.\u00a0\n*   Fridays from 10 a.m.-2 p.m.\n\nNancy Thompson  \n[thompson.2947@osu.edu](mailto:thompson.2947@osu.edu)  \n[More information](https://buckeyecommons.osu.edu/career-studios)",
+          "tags": [
+            "Professional/Personal Development",
+            "Students (Columbus Campus)",
+            "Students (All)",
+            "Buckeye Commons"
+          ],
+          "location": "Ohio Union - Keith B. Key Center for Student Leadership and Service ",
+          "id": "https://studentlife.osu.edu/Events.aspx?y=2026&mo=9&day=1&e=84221&title=career-studios-drop-in-resume-review-at-the-ohio-union",
+          "startDate": "2026-09-01T14:00:00.000Z"
+        },
+        {
+          "color": "#bb0000",
+          "endDate": "2026-09-01T22:00:00.000Z",
+          "campus": "columbus",
+          "link": "https://studentlife.osu.edu/Events.aspx?y=2026&mo=9&day=1&e=84291&title=career-studios-drop-in-resume-review-at-busch-house",
+          "itemHash": "b952c80595d78b26f58b48bbee22ac31",
+          "description": "Busch House Event Space - Room 101",
+          "label": "Student Life",
+          "title": "Career Studios Drop-In Resume Review at Busch House",
+          "content": "Career Studios are welcoming, drop-in spaces designed to give students quick, practical career support from their peers. No appointment needed. Stop by anytime to connect with trained Student Peer Career Coaches who are ready to help with everyday career questions and next steps.\n\nPeer Career Coaches can assist with:\n\n*   Building or updating a resume\n*   Searching for jobs or internships\n*   Preparing for interviews\n*   Connecting you with a professional Career Coach for individualized support\n\nEach Career Studio is supported by professional career coaching staff and designed to make career guidance accessible and approachable for all students.\n\n**Busch House at 2115 N. High Street**\n\n*   Mondays - Thursdays from 10 a.m.-6 p.m.\n*   Fridays from 10 a.m.-2 p.m.\n\nNancy Thompson  \n[thompson.2947@osu.edu](mailto:thompson.2947@osu.edu)  \n[More information](https://buckeyecommons.osu.edu/career-studios)",
+          "tags": [
+            "Professional/Personal Development",
+            "Students (Columbus Campus)",
+            "Students (All)",
+            "Buckeye Commons"
+          ],
+          "location": "Busch House Event Space - Room 101",
+          "id": "https://studentlife.osu.edu/Events.aspx?y=2026&mo=9&day=1&e=84291&title=career-studios-drop-in-resume-review-at-busch-house",
+          "startDate": "2026-09-01T14:00:00.000Z"
+        }
+      ]
+    }
+  }
+}
