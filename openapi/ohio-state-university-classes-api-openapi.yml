@@ -188,18 +188,6 @@ components:
             properties:
               course:
                 $ref: '#/components/schemas/Course'
-    Error:
-      type: object
-      properties:
-        status:
-          type: string
-        error:
-          type: object
-          properties:
-            code:
-              type: integer
-            message:
-              type: string
     Term:
       type: object
       description: An academic term exposed to class search.
@@ -226,6 +214,18 @@ components:
         endDate:
           type: string
           format: date
+    Error:
+      type: object
+      properties:
+        status:
+          type: string
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
     Course:
       type: object
       description: Catalog record for a course as offered in a term.
