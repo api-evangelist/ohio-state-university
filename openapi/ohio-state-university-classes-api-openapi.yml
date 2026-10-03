@@ -135,6 +135,83 @@ paths:
                 $ref: '#/components/schemas/Error'
 components:
   schemas:
+    Course:
+      type: object
+      description: Catalog record for a course as offered in a term.
+      properties:
+        term:
+          type: string
+        effectiveDate:
+          type: string
+          format: date
+        effectiveStatus:
+          type: string
+        title:
+          type: string
+        shortDescription:
+          type: string
+        description:
+          type: string
+        equivalentId:
+          type: string
+        allowMultiEnroll:
+          type: string
+        maxUnits:
+          type: number
+        minUnits:
+          type: number
+        repeatUnitsLimit:
+          type: number
+        grading:
+          type: string
+        component:
+          type: string
+        primaryComponent:
+          type: string
+        offeringNumber:
+          type: string
+        academicGroup:
+          type: string
+        subject:
+          type: string
+    Error:
+      type: object
+      properties:
+        status:
+          type: string
+        error:
+          type: object
+          properties:
+            code:
+              type: integer
+            message:
+              type: string
+    Term:
+      type: object
+      description: An academic term exposed to class search.
+      properties:
+        strm:
+          type: string
+          description: SIS term code.
+          examples:
+          - '1268'
+        descr:
+          type: string
+          examples:
+          - Autumn 2026
+        descrlong:
+          type: string
+          examples:
+          - 2026 Autmn
+        classSearch:
+          type: string
+          description: Y when class search is enabled for the term.
+        startDate:
+          type: string
+          format: date
+        endDate:
+          type: string
+          format: date
     ClassSearchResult:
       type: object
       properties:
@@ -188,80 +265,3 @@ components:
             properties:
               course:
                 $ref: '#/components/schemas/Course'
-    Term:
-      type: object
-      description: An academic term exposed to class search.
-      properties:
-        strm:
-          type: string
-          description: SIS term code.
-          examples:
-          - '1268'
-        descr:
-          type: string
-          examples:
-          - Autumn 2026
-        descrlong:
-          type: string
-          examples:
-          - 2026 Autmn
-        classSearch:
-          type: string
-          description: Y when class search is enabled for the term.
-        startDate:
-          type: string
-          format: date
-        endDate:
-          type: string
-          format: date
-    Error:
-      type: object
-      properties:
-        status:
-          type: string
-        error:
-          type: object
-          properties:
-            code:
-              type: integer
-            message:
-              type: string
-    Course:
-      type: object
-      description: Catalog record for a course as offered in a term.
-      properties:
-        term:
-          type: string
-        effectiveDate:
-          type: string
-          format: date
-        effectiveStatus:
-          type: string
-        title:
-          type: string
-        shortDescription:
-          type: string
-        description:
-          type: string
-        equivalentId:
-          type: string
-        allowMultiEnroll:
-          type: string
-        maxUnits:
-          type: number
-        minUnits:
-          type: number
-        repeatUnitsLimit:
-          type: number
-        grading:
-          type: string
-        component:
-          type: string
-        primaryComponent:
-          type: string
-        offeringNumber:
-          type: string
-        academicGroup:
-          type: string
-        subject:
-          type: string
